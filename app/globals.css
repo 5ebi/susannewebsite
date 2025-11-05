@@ -47,6 +47,7 @@ h1 {
   font-weight: 300;
   padding-bottom: 2rem;
   padding-top: 2rem;
+  z-index: 1;
 }
 
 .photoDescription {

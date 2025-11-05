@@ -5,7 +5,7 @@
   width: 100%;
   max-width: 100%;
   margin-inline: auto;
-  padding-inline: 25rem;
+  padding-inline: 2rem;
 }
 /*
 @media (min-width: 640px) {
@@ -25,12 +25,13 @@
     max-width: 1280px;
   }
 }
+*/
 
-@media (min-width: 1600px) {
+@media (min-width: 960px) {
   .containerMain {
-    max-width: 1440px;
+    max-width: 960px;
   }
-} */
+}
 
 .imageContainer {
   /* border: solid blue 2px; */
@@ -45,4 +46,6 @@
   display: block;
   overflow: hidden;
   border-radius: 1.5rem;
+
+  box-shadow: 0 0px 15px rgba(0, 0, 0, 0.2);
 }
