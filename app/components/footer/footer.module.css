@@ -1,0 +1,17 @@
+.footer {
+  background-color: var(--color1);
+  display: flex;
+  justify-content: center;
+  height: 80px;
+  align-items: center;
+  margin-bottom: 0rem;
+  border-top: solid 1px;
+  color: var(--color2);
+}
+
+.footerItems {
+  display: flex;
+  gap: 40px;
+  margin-right: 1rem;
+  align-items: center;
+}
