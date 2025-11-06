@@ -3,6 +3,8 @@ import { Noto_Sans_JP } from 'next/font/google';
 import './globals.css';
 import Footer from './components/footer/Footer';
 import Navbar from './components/navbar/Navbar';
+import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const notoSansJP = Noto_Sans_JP({
   variable: '--font-noto-sans-jp',
@@ -33,6 +35,8 @@ export default function RootLayout({
         <Navbar />
         <div className="containerMain" style={{ flex: 1 }}>
           {children}
+          <Analytics />
+          <SpeedInsights />
         </div>
         <Footer />
       </body>
