@@ -28,7 +28,7 @@ export default function Navbar() {
         <Link className={styles.link} href={'/übermich'}>
           Über mich
         </Link>
-        <Link className={styles.link} href={'/kontakt'}>
+        <Link className={styles.link2} href={'/kontakt'}>
           Kontakt
         </Link>
       </ul>

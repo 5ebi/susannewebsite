@@ -15,6 +15,13 @@ export default function Willkommen() {
           className={styles.image}
         />
         <p className="photoDescription"> Magª Susanne Rusch</p>
+        <Image
+          src={susanne}
+          priority
+          alt="Magistra Susanne Rusch – Psychotherapeutin und Musiktherapeutin in Wien"
+          sizes="(max-width: 1440px) 100vw, 1440px"
+          className={styles.image}
+        />
       </div>
 
       <h2>...hier soll der spruch unter dem Foto stehen</h2>

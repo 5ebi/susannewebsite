@@ -31,7 +31,9 @@ export default function RootLayout({
         }}
       >
         <Navbar />
-        <div style={{ flex: 1 }}>{children}</div>
+        <div className="containerMain" style={{ flex: 1 }}>
+          {children}
+        </div>
         <Footer />
       </body>
     </html>
