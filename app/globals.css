@@ -1,8 +1,10 @@
 :root {
   /*Hauptfarben*/
   --color1: #2c6981;
+  --color1_1: #2c698130;
   --color2: #fffbeb;
   --color3: #091c20;
+  --color4: #e8a77c4c;
   /*Faboptionen*/
   --suslcolor: #2c6981;
   --sanftesRosa: #e7c0be;

@@ -6,32 +6,45 @@ import Link from 'next/link';
 
 export default function Navbar() {
   return (
-    <div className={styles.navbar}>
-      <Image
-        className={styles.navLogo}
-        src={logo2}
-        priority
-        width={300}
-        alt="Logo von Magistra Susanne Rusch"
-      />
-
-      <ul className={styles.navItems}>
-        <Link className={styles.link} href={'/'}>
-          Willkommen
-        </Link>
-        <Link className={styles.link} href={'/psychotherapie'}>
-          Psychotherapie
-        </Link>
-        <Link className={styles.link} href={'/musiktherapie'}>
-          Musiktherapie
-        </Link>
-        <Link className={styles.link} href={'/übermich'}>
-          Über mich
-        </Link>
+    <nav className={styles.navbar}>
+      <div className={styles.navLogo}>
+        <Image
+          src={logo2}
+          priority
+          width="300"
+          quality={100}
+          alt="Logo von Magistra Susanne Rusch"
+        />
+      </div>
+      <div className={styles.navItemsDiv}>
+        <ul className={styles.navItems}>
+          <li>
+            <Link className={styles.link} href={'/'}>
+              Willkommen
+            </Link>
+          </li>
+          <li>
+            <Link className={styles.link} href={'/psychotherapie'}>
+              Psychotherapie
+            </Link>
+          </li>
+          <li>
+            <Link className={styles.link} href={'/musiktherapie'}>
+              Musiktherapie
+            </Link>
+          </li>
+          <li>
+            <Link className={styles.link} href={'/uebermich'}>
+              Über mich
+            </Link>
+          </li>
+        </ul>
+      </div>
+      <div className={styles.navButton}>
         <Link className={styles.link2} href={'/kontakt'}>
           Kontakt
         </Link>
-      </ul>
-    </div>
+      </div>
+    </nav>
   );
 }
