@@ -1,5 +1,4 @@
 import styles from './navbar.module.css';
-import logo from '@/public/images/logo.png';
 import logo2 from '@/public/images/logo-und-schrift.png';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -36,6 +35,11 @@ export default function Navbar() {
           <li>
             <Link className={styles.link} href={'/uebermich'}>
               Über mich
+            </Link>
+          </li>
+          <li>
+            <Link className={styles.link} href={'/rahmenbedingungen'}>
+              Rahmenbedingungen
             </Link>
           </li>
         </ul>

@@ -1,10 +1,16 @@
 :root {
   /*Hauptfarben*/
   --color1: #2c6981;
-  --color1_1: #2c698130;
-  --color2: #fffbeb;
+  --color1_1: #2c6981cf;
+  --color1_2: #2c698161;
+  --color1_3: #2c698118;
+  --color1_4: #2c698108;
+  --color2: #fff5ed;
+  --color2_1: #fff7f147;
   --color3: #091c20;
-  --color4: #e8a77c4c;
+  --color4: #e8a87c;
+  --color4_1: #e8a77c58;
+  --color4_2: #e8a77c33;
   /*Faboptionen*/
   --suslcolor: #2c6981;
   --sanftesRosa: #e7c0be;
@@ -45,25 +51,27 @@ ul {
 }
 
 h1 {
-  font-size: 3.5rem;
-  font-weight: 300;
+  font-size: 3rem;
+  font-weight: 200;
   padding-bottom: 2rem;
   padding-top: 2rem;
   z-index: 1;
+  opacity: 0.9;
 }
 
 .photoDescription {
   font-size: 1rem;
   opacity: 0.8;
+  color: var(--color1_1);
 }
 
-.containerMain {
+.containerLayout {
   display: flex;
   flex-direction: column;
   align-self: center;
 }
 
-@media (min-width: 960px) {
+/* @media (min-width: 960px) {
   .containerMain {
     max-width: 960px;
   }
@@ -73,4 +81,4 @@ h1 {
   .containerMain {
     max-width: 1280px;
   }
-}
+} */

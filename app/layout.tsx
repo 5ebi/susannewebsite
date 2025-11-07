@@ -12,9 +12,9 @@ const notoSansJP = Noto_Sans_JP({
 });
 
 export const metadata: Metadata = {
-  title: 'Susanne Rusch Psychotherapeutin',
+  title: 'Musik- und Psychotherapie in Wien | Mag. Susanne Rusch',
   description:
-    'Psychotherapie und Musiktherapie mit Magistra Susanne Rusch in Wien',
+    'Psychotherapie & Musiktherapie in Wien (1200) mit Mag. Susanne Rusch. Individuelle Begleitung für Erwachsene und Jugendliche – Termin online anfragen',
 };
 
 export default function RootLayout({
@@ -33,7 +33,7 @@ export default function RootLayout({
         }}
       >
         <Navbar />
-        <div className="containerMain" style={{ flex: 1 }}>
+        <div className="containerLayout" style={{ flex: 1 }}>
           {children}
           <Analytics />
           <SpeedInsights />

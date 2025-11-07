@@ -2,45 +2,51 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-  max-width: 100%;
+  width: 80vw;
   margin-inline: auto;
-  padding-inline: 2rem;
+}
+.containerMain2 {
+  width: 80vw;
+  padding: 3rem;
+  /* border: 1px solid var(--color2_1); */
+  border-radius: 3rem;
+  background-color: var(--color4_1);
+  box-shadow: 0px 0px 12px var(--color4_1);
+  backdrop-filter: blur(10px);
+  max-width: 1400px;
 }
 
-.imageContainer {
-  position: relative;
+.containerMain3 {
   display: flex;
+  justify-content: space-between;
+  padding-bottom: 100px;
 }
 
-.imageContainer2 {
-  position: relative;
-  display: flex;
-  flex-direction: row-reverse;
-  padding-top: 80px;
-}
-
-.spruchContainer {
-  align-self: center;
-  padding: 0 20 0 20;
-}
-
-.spruch {
-  font-size: 24px;
-}
 .image {
   width: 600px;
   height: auto;
   display: block;
-  overflow: hidden;
   border-radius: 1.5rem;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0px 15px var(--color1_3);
 }
 
-.container1 {
-  width: 1200px;
-  padding: 3rem;
-  border-radius: 1.5rem;
-  background-color: var(--color4);
-  box-shadow: 0px 0px 3px var(--color4);
+.spruchContainer {
+  align-self: center;
+  height: 100%;
+  width: 600px;
+  margin-left: 2rem;
+}
+
+.spruchContainerLeft {
+  align-self: center;
+  height: 100%;
+  width: 600px;
+  margin-right: 2rem;
+}
+
+.spruch {
+  font-size: 22px;
+  font-style: italic;
+  color: var(--color1);
+  opacity: 0.9;
 }

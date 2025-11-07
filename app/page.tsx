@@ -6,8 +6,8 @@ export default function Willkommen() {
   return (
     <main className={styles.containerMain}>
       <h1>Herzlich Willkommen</h1>
-      <div className={styles.container1}>
-        <div className={styles.imageContainer}>
+      <div className={styles.containerMain2}>
+        <div className={styles.containerMain3}>
           <div>
             <Image
               src={susanne}
@@ -28,7 +28,13 @@ export default function Willkommen() {
             </p>
           </div>
         </div>
-        <div className={styles.imageContainer2}>
+        <div className={styles.containerMain3}>
+          <div className={styles.spruchContainerLeft}>
+            <p className={styles.spruch}>
+              ...hier soll der spruch stehen, hier soll der spruch stehen, hier
+              soll der spruch stehen, hier soll der spruch stehen
+            </p>
+          </div>
           <div>
             <Image
               src={susanne}
@@ -41,12 +47,6 @@ export default function Willkommen() {
               className={styles.image}
             />
             <p className="photoDescription"> Magª Susanne Rusch</p>
-          </div>
-          <div className={styles.spruchContainer}>
-            <p className={styles.spruch}>
-              ...hier soll der spruch stehen, hier soll der spruch stehen, hier
-              soll der spruch stehen, hier soll der spruch stehen
-            </p>
           </div>
         </div>
       </div>
