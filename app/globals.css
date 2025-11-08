@@ -56,7 +56,7 @@ h1 {
   padding-bottom: 2rem;
   padding-top: 2rem;
   z-index: 1;
-  opacity: 0.9;
+  opacity: 1;
 }
 
 .photoDescription {

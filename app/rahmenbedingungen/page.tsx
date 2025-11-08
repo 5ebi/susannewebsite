@@ -39,10 +39,11 @@ export default function Rahmenbedingungen() {
   return (
     <main className={styles.wrapper}>
       <div className={styles.introBlock}>
-        <p className={styles.kicker}>Rahmenbedingungen</p>
-        <h1>Verlässlich, ruhig, achtsam</h1>
+        {/* <p className={styles.kicker}>Rahmenbedingungen</p> */}
+        <h1>Rahmenbedingungen</h1>
         <p>
-          Ich arbeite mit Schulkindern, Jugendlichen und Erwachsenen im Einzelsetting.
+          Ich arbeite mit Schulkindern, Jugendlichen und Erwachsenen im
+          Einzelsetting.
         </p>
       </div>
       <div className={styles.sections}>
