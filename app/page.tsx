@@ -1,6 +1,7 @@
 import styles from './page.module.css';
 import Image from 'next/image';
 import susanne from '@/public/images/susanne-rusch-psychotherapie.webp';
+import praxis from '@/public/images/Praxis4.jpg';
 
 export default function Willkommen() {
   return (
@@ -31,13 +32,12 @@ export default function Willkommen() {
         <div className={styles.containerMain3}>
           <div className={styles.spruchContainerLeft}>
             <p className={styles.spruch}>
-              ...hier soll der spruch stehen, hier soll der spruch stehen, hier
-              soll der spruch stehen, hier soll der spruch stehen
+              ...hier soll was anderes nettes stehen.
             </p>
           </div>
           <div>
             <Image
-              src={susanne}
+              src={praxis}
               priority
               alt="Magistra Susanne Rusch – Psychotherapeutin und Musiktherapeutin in Wien"
               sizes="(max-width: 1000px) 100vw, 1000px"
@@ -46,7 +46,7 @@ export default function Willkommen() {
               quality={100}
               className={styles.image}
             />
-            <p className="photoDescription"> Magª Susanne Rusch</p>
+            <p className="photoDescription"> Praxis</p>
           </div>
         </div>
       </div>

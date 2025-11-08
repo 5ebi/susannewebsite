@@ -1,0 +1,40 @@
+.wrapper {
+  width: min(80vw, 960px);
+  margin: 0 auto;
+  padding: 3rem 0 4rem;
+  color: var(--color1);
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.introBlock {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.85rem;
+  color: var(--color1_1);
+}
+
+.sections {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.sections section h2 {
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--color3);
+}
+
+.sections section p + p {
+  margin-top: 0.75rem;
+}

@@ -7,10 +7,10 @@
   --color1_4: #2c698108;
   --color2: #fff5ed;
   --color2_1: #fff7f147;
-  --color3: #091c20;
+  --color3: #12373e;
   --color4: #e8a87c;
-  --color4_1: #e8a77c58;
-  --color4_2: #e8a77c33;
+  --color4_1: #e8a77c23;
+  --color5: rgb(254, 249, 245);
   /*Faboptionen*/
   --suslcolor: #2c6981;
   --sanftesRosa: #e7c0be;
@@ -29,7 +29,7 @@ body {
 
 body {
   color: var(--color1);
-  background: var(--color2);
+  background: var(--color5);
   font-family: var(--font-noto-sans-jp), Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
