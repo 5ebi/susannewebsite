@@ -16,7 +16,7 @@ export default function Musiktherapie() {
         schafft einen sicheren, kreativen Raum, in dem eigene Gefühle und
         Erfahrungen gespürt, verstanden und verarbeitet werden können.
         Musiktherapie kann so helfen, Selbstwahrnehmung, Ausdrucksfähigkeit und
-        emotionale Balance zu stärken und neue Perspektiven zu entdecken.
+        emotionale Balance zu stärken und neue Perspektiven zu entdecken..
       </p>
     </main>
   );
