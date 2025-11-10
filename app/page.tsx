@@ -1,7 +1,7 @@
 import styles from './page.module.css';
 import Image from 'next/image';
 import susanne from '@/public/images/susanne-rusch-psychotherapie.webp';
-import praxis from '@/public/images/praxis4.jpg';
+import praxis from '@/public/images/Praxis4.jpg';
 
 export default function Willkommen() {
   return (
