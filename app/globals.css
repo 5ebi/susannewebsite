@@ -5,7 +5,7 @@
   --color1_2: #2c698161;
   --color1_3: #2c698138;
   --color1_4: #2c69811d;
-  --color2: #fff5ed;
+  --color2: #fff8f2;
   --color2_1: #fff7f147;
   --color3: #12373e;
   --color4: #e8a87c;
@@ -31,7 +31,7 @@ body {
 
 body {
   color: var(--color1);
-  background: var(--color5);
+  background: var(--color2);
   font-family: var(--font-noto-sans-jp), Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
