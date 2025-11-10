@@ -40,7 +40,7 @@ export default function Rahmenbedingungen() {
     <main className={styles.wrapper}>
       <div className={styles.introBlock}>
         {/* <p className={styles.kicker}>Rahmenbedingungen</p> */}
-        <h1>Rahmenbedingungen</h1>
+        <h1 className={styles.heading}>Rahmenbedingungen</h1>
         <p>
           Ich arbeite mit Schulkindern, Jugendlichen und Erwachsenen im
           Einzelsetting.

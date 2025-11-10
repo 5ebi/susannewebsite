@@ -1,7 +1,6 @@
 .wrapper {
-  width: min(80vw, 960px);
+  width: var(--page-inline-width);
   margin: 0 auto;
-  padding: 3rem 0 4rem;
   color: var(--color1);
   display: flex;
   flex-direction: column;
@@ -13,6 +12,12 @@
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+}
+
+.heading {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--color1);
 }
 
 .kicker {

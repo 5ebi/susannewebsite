@@ -5,6 +5,7 @@ export default function Footer() {
     <div className={styles.footer}>
       <ul className={styles.footerItems}>
         <li>Impressum</li>
+        <li>Datenschutz</li>
       </ul>
     </div>
   );
