@@ -1,20 +1,27 @@
 .navbar {
   background-color: var(--color2);
   display: flex;
-  height: 120px;
+  height: 6rem;
   align-items: center;
+  justify-content: center;
   color: var(--color1);
-  border-bottom: solid 1px var(--color1_2);
+  /* border-bottom: solid 0.5px var(--color1_2); */
   position: sticky;
   top: 0;
   width: 100%;
   z-index: 1000;
   min-width: 1000px;
+  box-shadow: 0px 0px 10px 0px var(--color1_3);
 }
-
+.maxWidth {
+  width: var(--page-inline-width);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+}
 .navLogo {
   flex: 1;
-  margin-left: 3rem;
   align-items: center;
   display: flex;
   justify-content: flex-start;
@@ -29,7 +36,7 @@
   font-weight: 400;
   justify-content: center;
   flex: 1;
-  padding-left: 2rem;
+  padding-left: 0rem;
   margin: 0;
 }
 
@@ -42,11 +49,17 @@
 
 .navButton {
   display: flex;
-  margin-right: 3rem;
+  margin-right: 0rem;
   align-items: center;
   flex: 1;
   justify-content: flex-end;
 }
+
+/* @media (max-width: 1200px) {
+  .navButton {
+    margin-right: 3rem;
+  }
+} */
 
 .link {
   display: flex;
@@ -63,10 +76,10 @@
 .link2 {
   display: inline-flex;
   align-items: center;
-  border-radius: 999px;
+  border-radius: 20px;
   opacity: 1;
   border: solid 1px var(--color1);
-  transition: ease-in 0.3s;
+  transition: cubic-bezier(0, 0, 0, 1) 0.2s;
   padding: 8 10 10 10px;
   line-height: 1;
   /* font-size: 20px; */

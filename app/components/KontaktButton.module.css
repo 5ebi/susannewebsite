@@ -1,0 +1,21 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  opacity: 1;
+  border: solid 1px var(--color1);
+  /* transition: ease-in 0.2s; */
+  padding: 8px 10px 10px 10px;
+  line-height: 1;
+  font-weight: 500;
+  background-color: var(--color1);
+  color: var(--color2);
+  border-radius: 2000px;
+  /* transition: cubic-bezier(0, 0, 0, 1) 0.2s; */
+}
+
+.button:hover {
+  background-color: var(--color6);
+  /* color: var(--color1); */
+  opacity: 1;
+  border: solid 1px var(--color6);
+}

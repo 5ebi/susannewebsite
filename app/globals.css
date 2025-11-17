@@ -5,12 +5,14 @@
   --color1_2: #2c698161;
   --color1_3: #2c698138;
   --color1_4: #2c69811d;
-  --color2: #fff7ef;
+  --color2: #f9f4ee;
   --color2_1: #fff7f147;
   --color3: #12373e;
   --color4: #e8a87c;
   --color4_1: #e8a77c23;
   --color5: rgb(255, 255, 255);
+  --color6: #fac388;
+
   /*Faboptionen*/
   --suslcolor: #2c6981;
   --sanftesRosa: #e7c0be;
@@ -20,8 +22,12 @@
   --eierschale: #fffbeb;
   --eierschale2: #fffcf1;
   --hellerSand: #f2b880;
+
+  /*Widths*/
   --page-max-width: 1200px;
   --page-inline-width: min(90vw, var(--page-max-width));
+  --tablet-breakpoint-width: 1024px;
+  --phone-breakpoint-width: 768px;
 }
 
 html,
@@ -65,7 +71,18 @@ h1 {
   font-size: 0.9rem;
   opacity: 0.8;
   color: var(--color1_1);
-  padding-top: 2px;
+  /* padding-top: 2px; */
+  text-align: left;
+  padding-left: 20px;
+}
+
+.photoDescriptionRight {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  color: var(--color1_1);
+  /* padding-top: 2px; */
+  padding-right: 20px;
+  text-align: right;
 }
 
 .containerLayout {

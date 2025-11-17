@@ -14,7 +14,7 @@
   /* flex: 1; */
 }
 .image {
-  width: 500px;
+  width: 30rem;
   height: auto;
   display: block;
   border-radius: 1rem;
@@ -25,10 +25,9 @@
 .containerText {
   display: flex;
   flex-direction: row;
-  width: 500px;
+  width: 30rem;
   text-align: left;
   align-self: left;
-  margin-top: 4rem;
 }
 
 .containerText p {
