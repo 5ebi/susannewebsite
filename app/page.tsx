@@ -46,7 +46,7 @@ export default function Willkommen() {
               quality={100}
               className={styles.image2}
             />
-            <p className="photoDescription">Praxisraum in Wien</p>
+            <p className="photoDescription">Mein Praxisraum in Wien</p>
           </div>
         </div>
       </div>
