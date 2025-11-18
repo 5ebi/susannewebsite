@@ -27,7 +27,7 @@ export default function Willkommen() {
               Wien! <br />
             </p>
             <p className={styles.spruch2}>
-              Meine Name ist Susanne Rusch und ich freue mich sehr, Sie auf
+              MMMeine Name ist Susanne Rusch und ich freue mich sehr, Sie auf
               meiner Webseite begrüßen zu dürfen.
             </p>
           </div>
