@@ -51,7 +51,7 @@
   align-self: center;
   height: 100%;
   width: 35rem;
-  box-shadow: inset 0px 0px 25px -10px var(--color6);
+  box-shadow: inset 0px 0px 25px -10px var(--color1_2);
   border-radius: 1rem;
   padding: 1rem;
   margin-bottom: 20px;
@@ -68,23 +68,26 @@
 }
 
 .spruch {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 300;
   /* font-style: italic; */
   color: var(--color1);
   opacity: 1;
+  font-style: italic;
   line-height: 2.5rem;
-  padding-bottom: 1rem;
-  /* letter-spacing: 3px; */
+  text-align: center;
+  /* padding-bottom: 1rem; */
 
   /* border: 1px var(--color1) solid; */
 }
 
 .spruch2 {
-  font-size: 1.2rem;
-  font-weight: 400;
+  font-size: 1.3rem;
+  /* letter-spacing: 1px; */
+  font-weight: 300;
   /* font-style: italic; */
   color: var(--color1);
+  text-align: center;
 
   line-height: 2.5rem;
 }
