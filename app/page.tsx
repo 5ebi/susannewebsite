@@ -15,22 +15,22 @@ export default function Willkommen() {
               src={susanne}
               priority
               alt="Magistra Susanne Rusch – Psychotherapeutin und Musiktherapeutin in Wien"
-              width="2500"
-              height="1667"
+              // width="2500"
+              // height="1667"
               className={styles.image}
             />
             <p className="photoDescription"> Mag.ª Susanne Rusch</p>
           </div>
-          <div className={styles.spruchContainer}>
+          <section className={styles.spruchContainer}>
             <p className={styles.spruch}>
-              .. in meiner Praxis für Psychotherapie und Musiktherapie in 1200
+              in meiner Praxis für Psychotherapie und Musiktherapie in 1200
               Wien! <br />
             </p>
             <p className={styles.spruch2}>
-              MMMeine Name ist Susanne Rusch und ich freue mich sehr, Sie auf
+              Meine Name ist Susanne Rusch und ich freue mich sehr, Sie auf
               meiner Webseite begrüßen zu dürfen.
             </p>
-          </div>
+          </section>
         </div>
         <div className={styles.containerMain4}>
           {/* <div className={styles.spruchContainerLeft}>
@@ -46,6 +46,12 @@ export default function Willkommen() {
             Mein Praxisraum im 20. Bezirk in Wien
           </p>
         </div>
+      </div>
+      <div className={styles.containerMain5}>
+        <p>
+          Hier könnte auch noch etwas stehen. Zb eine Art: Kontakieren sie mich
+          noch heute, um einen baldigen Ersttermin auszumachen od ähnliches.
+        </p>
       </div>
       <KontaktButton />
     </main>

@@ -13,7 +13,6 @@ export default function NavbarMobile() {
             src={logo2}
             priority
             width="50"
-            quality={100}
             alt="Logo von Magistra Susanne Rusch"
           />
         </div>

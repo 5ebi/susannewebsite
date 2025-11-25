@@ -1,5 +1,5 @@
 .button {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   opacity: 1;
   border: solid 1px var(--color1);
@@ -10,12 +10,13 @@
   background-color: var(--color1);
   color: var(--color2);
   border-radius: 2000px;
-  transition: cubic-bezier(0, 0, 0, 1) 0.2s;
+  transition: cubic-bezier(0, 0, 0, 1) 0.15s;
 }
 
 .button:hover {
   background-color: var(--color2);
-  color: var(--color1);
+  color: var(--color3);
   opacity: 1;
-  border: solid 1px var(--color1);
+  border: solid 1px var(--color3);
+  opacity: 0.9;
 }

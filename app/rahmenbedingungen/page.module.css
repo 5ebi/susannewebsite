@@ -1,42 +1,36 @@
 .wrapper {
   width: var(--page-inline-width);
-  margin: 0 auto;
+  margin-inline: auto;
   color: var(--color1);
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
-}
-
-.introBlock {
-  text-align: flex-start;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
+  margin-bottom: 2rem;
 }
 
 .heading {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  font-weight: 500;
   color: var(--color1);
-}
-
-.kicker {
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  font-size: 0.85rem;
-  color: var(--color1_1);
 }
 
 .sections {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  max-width: 50rem;
+}
+
+.sections section {
+  /* box-shadow: 0px 2px 25px -10px var(--color1_3);
+  border-radius: 1rem;
+  padding: 2rem; */
 }
 
 .sections section h2 {
   font-weight: 400;
-  font-size: 1.5rem;
-  margin-bottom: 0.75rem;
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
   color: var(--color3);
 }
 

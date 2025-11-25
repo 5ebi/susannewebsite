@@ -36,7 +36,7 @@
   width: 35rem;
   height: auto;
   border-radius: 1rem;
-  box-shadow: 0px 0px 15px -5px var(--color1_3);
+  box-shadow: 0px 2px 15px -3px var(--color1_2);
 }
 
 .image2 {
@@ -45,7 +45,7 @@
   height: 25rem;
   display: block;
   border-radius: 1rem;
-  box-shadow: 0px 0px 15px -5px var(--color1_3);
+  box-shadow: 0px 2px 15px -3px var(--color1_2);
 }
 .spruchContainer {
   display: flex;
@@ -53,12 +53,15 @@
   justify-content: center;
   text-align: center;
   width: 35rem;
-  box-shadow: 0px 0px 15px -10px var(--color1);
+  box-shadow: 0px 2px 25px -10px var(--color1_3);
   border-radius: 1rem;
-  padding: 1rem;
+  padding: 2rem;
   margin-bottom: 20px;
+  min-height: 14rem;
+  max-height: 24rem;
+  align-self: center;
   /* background: #fac38822; */
-  padding-inline: 2rem;
+
   /* background-color: blue; */
 }
 .spruchContainerLeft {
@@ -70,33 +73,45 @@
 }
 
 .spruch {
-  font-size: 1.4rem;
-  font-weight: 400;
+  font-size: 1.5rem;
+  font-weight: 300;
   color: var(--color1);
-  opacity: 1;
+  opacity: 0.8;
   /* font-style: italic; */
-  line-height: 2.5rem;
-  text-align: center;
+  /* line-height: 2rem; */
+  text-align: left;
   padding-bottom: 1rem;
 
   /* border: 1px var(--color1) solid; */
 }
 
 .spruch2 {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   /* letter-spacing: 1px; */
-  font-weight: 300;
+  font-weight: 400;
   /* font-style: italic; */
   color: var(--color1);
-  text-align: center;
+  opacity: 1;
+  text-align: left;
 
-  line-height: 2.5rem;
+  /* line-height: 2rem; */
 }
 
 .heading {
   font-size: 3.5rem;
-  font-weight: 100;
-  margin-bottom: 1rem;
+  font-weight: 200;
+  padding-bottom: 3rem;
+  letter-spacing: 1px;
+  opacity: 1;
+}
+
+.containerMain5 {
+  display: flex;
+  flex-direction: column;
+  max-width: 33rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+  text-align: center;
 }
 
 @media (max-width: 1024) {
@@ -104,6 +119,7 @@
     flex-direction: column;
     align-items: center;
   }
+
   /* .spruchContainer {
     width: 100%;
     margin-top: 2rem;
@@ -112,4 +128,14 @@
     width: 100%;
     margin-right: 0rem;
     text-align: center; */
+}
+
+@media (max-width: 550) {
+  /* .image {
+    width: 90vw;
+  } */
+
+  .heading {
+    font-size: 2.1rem;
+  }
 }

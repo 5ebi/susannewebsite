@@ -18,6 +18,7 @@ export default function Psychotherapie() {
             Gespräch, aber auch durch kreative Ausdrucksformen, dem Wahrnehmen
             des eigenen Körpererlebens oder Rollenspielen. Diese können helfen,
             Gedanken, Gefühle und Verhaltensmuster bewusst zu machen.<br></br>
+            <br></br>
             Den therapeutischen Prozess begleite ich stets mit Respekt,
             Wertschätzung und echtem Interesse an Ihrem individuellen Erleben.
             So entsteht ein Raum, in dem vielleicht eingefahrene Muster sichtbar

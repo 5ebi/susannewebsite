@@ -1,13 +1,13 @@
 :root {
   /*Hauptfarben*/
   --color1: #2c6981;
-  --color1_1: #2c6981cf;
+  --color1_1: #2c6981d5;
   --color1_2: #2c698161;
   --color1_3: #2c698138;
   --color1_4: #2c69811d;
   --color2: #fbf5ed;
   --color2_1: #fff7f147;
-  --color3: #12373e;
+  --color3: #154048;
   --color4: #e8a87c;
   --color4_1: #e8a77c23;
   --color5: rgb(255, 255, 255);
@@ -60,7 +60,7 @@ ul {
 
 h1 {
   font-size: 3rem;
-  font-weight: 200;
+  font-weight: 500;
   padding-bottom: 2rem;
   padding-top: 2rem;
   z-index: 1;
@@ -69,19 +69,19 @@ h1 {
 
 .photoDescription {
   font-size: 0.9rem;
-  opacity: 0.8;
+  opacity: 0.9;
   color: var(--color1_1);
   /* padding-top: 2px; */
   text-align: left;
-  padding-left: 20px;
+  padding-left: 0.8rem;
 }
 
 .photoDescriptionRight {
   font-size: 0.9rem;
-  opacity: 0.8;
+  opacity: 0.9;
   color: var(--color1_1);
   /* padding-top: 2px; */
-  padding-right: 20px;
+  padding-right: 0.8rem;
   text-align: right;
 }
 
@@ -104,5 +104,5 @@ h1 {
 } */
 
 p {
-  font-size: 17px;
+  font-size: 1rem;
 }
