@@ -14,7 +14,7 @@ const notoSansJP = Noto_Sans_JP({
 export const metadata: Metadata = {
   title: 'Praxis für Psychotherapie und Musiktherapie | Susanne Rusch',
   description:
-    'Psychotherapie & Musiktherapie in Wien (1200) mit Mag. Susanne Rusch. Individuelle Begleitung für Erwachsene und Jugendliche – Termin online anfragen',
+    'Psychotherapie & Musiktherapie in Wien (1200) mit Mag.a Susanne Rusch. Individuelle Begleitung für Erwachsene und Jugendliche – Termin online anfragen',
 };
 
 export default function RootLayout({

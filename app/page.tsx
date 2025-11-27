@@ -15,8 +15,6 @@ export default function Willkommen() {
               src={susanne}
               priority
               alt="Magistra Susanne Rusch – Psychotherapeutin und Musiktherapeutin in Wien"
-              // width="2500"
-              // height="1667"
               className={styles.image}
             />
             <p className="photoDescription"> Mag.ª Susanne Rusch</p>
@@ -53,7 +51,7 @@ export default function Willkommen() {
           noch heute, um einen baldigen Ersttermin auszumachen od ähnliches.
         </p>
       </div>
-      <KontaktButton />
+      <KontaktButton>Kontakt</KontaktButton>
     </main>
   );
 }

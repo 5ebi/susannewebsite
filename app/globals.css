@@ -71,7 +71,7 @@ h1 {
   font-size: 0.9rem;
   opacity: 0.9;
   color: var(--color1_1);
-  /* padding-top: 2px; */
+
   text-align: left;
   padding-left: 0.8rem;
 }
@@ -80,7 +80,7 @@ h1 {
   font-size: 0.9rem;
   opacity: 0.9;
   color: var(--color1_1);
-  /* padding-top: 2px; */
+
   padding-right: 0.8rem;
   text-align: right;
 }
@@ -91,17 +91,12 @@ h1 {
   align-self: center;
 }
 
-/* @media (min-width: 960px) {
-  .containerMain {
-    max-width: 960px;
+@media (max-width: 620) {
+  body,
+  html {
+    --page-inline-width: min(100vw, var(--page-max-width));
   }
 }
-
-@media (min-width: 1280px) {
-  .containerMain {
-    max-width: 1280px;
-  }
-} */
 
 p {
   font-size: 1rem;

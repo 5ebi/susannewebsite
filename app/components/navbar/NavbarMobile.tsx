@@ -1,20 +1,28 @@
+'use client';
+
 import styles from './navbar.module.css';
 import logo2 from '@/public/images/logo.png';
 import Image from 'next/image';
 import Link from 'next/link';
 import KontaktButton from '../KontaktButton';
+import { useState } from 'react';
+import Kontakt from '@/app/kontakt/page';
 
 export default function NavbarMobile() {
+  const [open, useOpen] = useState(false);
+
   return (
     <div className={styles.navbarMobile}>
       <div className={styles.maxWidth}>
         <div className={styles.navLogo}>
-          <Image
-            src={logo2}
-            priority
-            width="50"
-            alt="Logo von Magistra Susanne Rusch"
-          />
+          <Link href={'/'}>
+            <Image
+              src={logo2}
+              priority
+              width="50"
+              alt="Logo von Magistra Susanne Rusch"
+            />
+          </Link>
         </div>
         <div className={styles.navItemsDiv}>
           <ul className={styles.navItems}>
@@ -44,9 +52,12 @@ export default function NavbarMobile() {
               </Link>
             </li>
           </ul>
+          <div className={styles.navButton}>
+            <KontaktButton>TEST</KontaktButton>
+          </div>
         </div>
-        <div className={styles.navButton}>
-          <KontaktButton />
+        <div className={styles.burger} onClick={() => useOpen(true)}>
+          burgerButton
         </div>
       </div>
     </div>

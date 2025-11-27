@@ -46,7 +46,7 @@ export default function NavbarDesktop() {
           </ul>
         </div>
         <div className={styles.navButton}>
-          <KontaktButton />
+          <KontaktButton>Kontakt</KontaktButton>
         </div>
       </div>
     </div>

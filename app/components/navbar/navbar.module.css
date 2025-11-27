@@ -14,7 +14,8 @@
 }
 
 .navbarMobile {
-  background-color: var(--color2);
+  /* background-color: var(--color2); */
+  /* background-color: red; */
   display: flex;
   height: 6rem;
   align-items: center;
@@ -25,6 +26,8 @@
   top: 0;
   width: 100%;
   z-index: 1000;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 .maxWidth {
   width: var(--page-inline-width);
@@ -114,13 +117,28 @@
   opacity: 1;
 }
 
+.burger {
+  background-color: var(--color2);
+  color: color1;
+}
+
 @media (min-width: 1025px) {
   .navbarMobile {
+    display: none;
+  }
+
+  .burger {
     display: none;
   }
 }
 @media (max-width: 1024px) {
   .navbarDesktop {
+    display: none;
+  }
+  .navItemsDiv {
+    display: none;
+  }
+  .navButton {
     display: none;
   }
 }

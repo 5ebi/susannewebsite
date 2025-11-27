@@ -27,7 +27,7 @@ export default function Psychotherapie() {
             ist.
           </p>
         </div>
-        <div>
+        <div className={styles.imageContainer}>
           <Image
             src={praxis3}
             priority
