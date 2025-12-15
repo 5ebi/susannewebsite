@@ -24,34 +24,27 @@ export default function Willkommen() {
               in meiner Praxis für Psychotherapie und Musiktherapie in 1200
               Wien! <br />
             </p>
-            <p className={styles.spruch2}>
-              Meine Name ist Susanne Rusch und ich freue mich sehr, Sie auf
-              meiner Webseite begrüßen zu dürfen.
+            <p className={styles.spruch}>
+              Meine Name ist Susanne Rusch und ich freue mich, Sie auf meiner
+              Webseite begrüßen zu dürfen.
             </p>
           </section>
         </div>
         <div className={styles.containerMain4}>
-          {/* <div className={styles.spruchContainerLeft}>
-            <p className={styles.spruch}></p>
-          </div> */}
-          <Image
-            src={praxis}
-            priority
-            alt="Praxisraum von Magistra Susanne Rusch – Psychotherapeutin und Musiktherapeutin in Wien"
-            className={styles.image2}
-          />
-          <p className="photoDescriptionRight">
-            Mein Praxisraum im 20. Bezirk in Wien
-          </p>
+          <hr className={styles.divider} />
+          <div className={styles.spruchContainer2}>
+            <div>
+              <p className={styles.spruch2}>
+                „Du nimmst das, was da ist, und du nimmst es so, wie es ist,
+                <br></br>was immer auch daraus werden mag.“
+              </p>
+              <p className={styles.spruch2_1}>Lore Perls</p>
+            </div>
+          </div>
         </div>
       </div>
-      <div className={styles.containerMain5}>
-        <p>
-          Hier könnte auch noch etwas stehen. Zb eine Art: Kontakieren sie mich
-          noch heute, um einen baldigen Ersttermin auszumachen od ähnliches.
-        </p>
-      </div>
-      <KontaktButton>Kontakt</KontaktButton>
+      <div className={styles.containerMain5}></div>
+      <KontaktButton>Kontaktieren Sie mich</KontaktButton>
     </main>
   );
 }

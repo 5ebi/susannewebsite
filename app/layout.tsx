@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Noto_Sans_JP } from 'next/font/google';
+import { Noto_Sans_JP, BioRhyme } from 'next/font/google';
 import './globals.css';
 import Footer from './components/footer/Footer';
 import Navbar from './components/navbar/Navbar';
@@ -8,6 +8,11 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const notoSansJP = Noto_Sans_JP({
   variable: '--font-noto-sans-jp',
+  subsets: ['latin'],
+});
+
+const bioRhyme = BioRhyme({
+  variable: '--font-biorhyme',
   subsets: ['latin'],
 });
 
@@ -23,9 +28,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="de">
+      <head>
+        {/* Google Maps Performance Optimierung */}
+        <link rel="dns-prefetch" href="https://maps.googleapis.com" />
+        <link rel="dns-prefetch" href="https://maps.gstatic.com" />
+        <link rel="preconnect" href="https://maps.googleapis.com" />
+        <link rel="preconnect" href="https://maps.gstatic.com" crossOrigin="" />
+      </head>
       <body
-        className={`${notoSansJP.variable}`}
+        className={`${notoSansJP.variable} ${bioRhyme.variable}`}
         style={{
           display: 'flex',
           flexDirection: 'column',

@@ -70,8 +70,7 @@ h1 {
 .photoDescription {
   font-size: 0.9rem;
   opacity: 0.9;
-  color: var(--color1_1);
-
+  color: var(--color1);
   text-align: left;
   padding-left: 0.8rem;
 }
@@ -79,7 +78,7 @@ h1 {
 .photoDescriptionRight {
   font-size: 0.9rem;
   opacity: 0.9;
-  color: var(--color1_1);
+  color: var(--color1);
 
   padding-right: 0.8rem;
   text-align: right;

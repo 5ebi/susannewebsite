@@ -27,81 +27,9 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-bottom: 6.3rem;
+  margin-bottom: 3rem;
   /* background-color: red; */
   width: var(--page-inline-width);
-}
-.image {
-  width: 35rem;
-  height: auto;
-  border-radius: 1rem;
-  box-shadow: 0px 2px 15px -3px var(--color1_2);
-}
-
-.image2 {
-  object-fit: cover;
-  width: 100%;
-  height: 25rem;
-  display: block;
-  border-radius: 1rem;
-  box-shadow: 0px 2px 15px -3px var(--color1_2);
-}
-.spruchContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  max-width: 35rem;
-  box-shadow: 0px 2px 25px -10px var(--color1_3);
-  border-radius: 1rem;
-  padding: 2rem;
-  margin-bottom: 20px;
-  min-height: 14rem;
-  max-height: 24rem;
-  align-self: center;
-  /* background: #fac38822; */
-
-  /* background-color: blue; */
-}
-.spruchContainerLeft {
-  align-self: center;
-  text-align: right;
-  height: 100%;
-  width: 35rem;
-  margin-right: 3rem;
-}
-
-.spruch {
-  font-size: 1.5rem;
-  font-weight: 300;
-  color: var(--color1);
-  opacity: 0.8;
-  /* font-style: italic; */
-  /* line-height: 2rem; */
-  text-align: left;
-  padding-bottom: 1rem;
-
-  /* border: 1px var(--color1) solid; */
-}
-
-.spruch2 {
-  font-size: 1.2rem;
-  /* letter-spacing: 1px; */
-  font-weight: 400;
-  /* font-style: italic; */
-  color: var(--color1);
-  opacity: 1;
-  text-align: left;
-
-  /* line-height: 2rem; */
-}
-
-.heading {
-  font-size: 3.5rem;
-  font-weight: 200;
-  padding-bottom: 3rem;
-  letter-spacing: 1px;
-  opacity: 1;
 }
 
 .containerMain5 {
@@ -112,8 +40,111 @@
   opacity: 0.9;
   text-align: center;
 }
+.image {
+  width: 35rem;
+  height: auto;
+  border-radius: 1rem;
+  box-shadow: 0px 2px 20px -3px var(--color1_3);
+}
 
-@media (max-width: 1024) {
+.divider {
+  width: 100%;
+  background-color: var(--color1_2);
+  height: 1px;
+  border: none;
+}
+
+.spruchContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  max-width: 35rem;
+  box-shadow: 0px 2px 20px -3px var(--color1_3);
+  border-radius: 1rem;
+  padding: 2rem 2rem;
+  margin-bottom: 20px;
+  min-height: 14rem;
+  max-height: 24rem;
+  align-self: center;
+  /* background: #fac38822; */
+
+  /* background-color: blue; */
+}
+
+.spruchContainer2 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  max-width: 40rem;
+  padding: 2rem 2rem 2rem 2rem;
+  min-height: 9.5rem;
+  border-radius: 1.25rem;
+  /* border: 1px solid var(--color1_3); */
+  /* box-shadow: 0px 2px 25px -10px var(--color1_4); */
+  /* background: radial-gradient(var(--color1_3), var(--color2)); */
+  overflow: hidden;
+  align-self: center;
+  margin-top: 1rem;
+}
+
+.spruch {
+  font-size: 1.35rem;
+  font-weight: 300;
+  color: var(--color1);
+  opacity: 1;
+  /* font-style: italic; */
+  /* line-height: 2rem; */
+  text-align: left;
+  padding-bottom: 0.8rem;
+
+  /* border: 1px var(--color1) solid; */
+}
+
+.spruch2 {
+  position: relative;
+  z-index: 1;
+  font-size: 1.2rem;
+  /* letter-spacing: 1px; */
+  font-family: bioRhyme;
+  font-weight: 300;
+  /* font-style: italic; */
+  color: var(--color1);
+  opacity: 1;
+  text-align: center;
+  box-shadow: 10px;
+
+  /* line-height: 2rem; */
+}
+
+.spruch2_1 {
+  position: relative;
+  z-index: 1;
+  font-size: 1rem;
+  /* letter-spacing: 1px; */
+  font-weight: 400;
+  /* font-style: italic; */
+  color: var(--color1);
+  opacity: 1;
+  text-align: right;
+  padding-top: 1rem;
+
+  /* line-height: 2rem; */
+}
+
+.heading {
+  font-size: 3.5rem;
+  font-weight: 200;
+  padding-bottom: 3rem;
+  letter-spacing: 1px;
+  opacity: 1;
+  margin-top: 1rem;
+  margin-bottom: 0rem;
+}
+
+@media (max-width: 1023) {
   .containerMain3 {
     flex-direction: column;
     align-items: center;
@@ -121,7 +152,6 @@
 
   .spruchContainer {
     width: 100%;
-    /* background-color: none; */
     box-shadow: none;
   }
 
@@ -134,22 +164,26 @@
     box-shadow: 0px 2px 15px -3px var(--color1_2);
     align-self: center;
   }
+
+  .heading {
+    font-size: 2.8rem;
+  }
 }
 
 @media (max-width: 620) {
-  /* .image {
-    width: 90vw;
-  } */
-  /*
+  .image {
+    max-width: 90vw;
+  }
+
   .containerMain,
   .containerMain2,
   .containerMain3 .containerMain4,
   .containerMain5 {
-    width: 100%;
-  } */
+    max-width: 100%;
+  }
 
   .heading {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .image {

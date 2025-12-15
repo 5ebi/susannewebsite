@@ -14,7 +14,7 @@
   /* flex-wrap: wrap; */
   gap: 3rem;
   /* flex-grow: 1; */
-  background-color: azure;
+  /* background-color: azure; */
 }
 
 .containerText {
@@ -25,7 +25,6 @@
   text-align: left;
   align-self: left;
   /* flex-grow: 1; */
-  background-color: aqua;
 }
 
 /* .containerImage {
@@ -54,5 +53,9 @@
   .containerMain2 {
     flex-direction: column;
     align-items: center;
+  }
+  .containerText {
+    max-width: 40rem;
+    align-self: flex-start;
   }
 }

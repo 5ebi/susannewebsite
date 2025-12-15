@@ -5,12 +5,17 @@ export default function Footer() {
   return (
     <div className={styles.footer}>
       <ul className={styles.footerItems}>
-        <Link className={styles.link} href={'/impressum'}>
-          <li>Impressum</li>
-        </Link>
-        <Link className={styles.link} href={'/datenschutz'}>
-          <li>Datenschutz</li>
-        </Link>
+        <li>
+          <Link className={styles.link} href={'/impressum'}>
+            Impressum{' '}
+          </Link>
+        </li>
+
+        <li>
+          <Link className={styles.link} href={'/datenschutz'}>
+            Datenschutz
+          </Link>
+        </li>
       </ul>
     </div>
   );

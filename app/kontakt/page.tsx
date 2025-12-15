@@ -2,7 +2,7 @@ import styles from './page.module.css';
 
 const address = 'Hannovergasse 16/3, 1200 Wien';
 const phone = '+43 680 1528926';
-const email = 'psychotherapie.rusch@gmail.com';
+const email = 'info@psychotherapie-rusch.at';
 
 export default function Kontakt() {
   return (
@@ -10,10 +10,10 @@ export default function Kontakt() {
       <h1 className={styles.heading}>Kontakt</h1>
       <div className={styles.wrapper}>
         <div className={styles.contactDetails}>
-          <p>
+          <div>
             <span>Praxisadresse</span>
             <p>{address}</p>
-          </p>
+          </div>
           <p>
             <span>Telefon</span>
             <a href={`tel:${phone.replace(/\s+/g, '')}`}>{phone}</a>
