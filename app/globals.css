@@ -91,13 +91,6 @@ h1 {
   align-self: center;
 }
 
-@media (max-width: 620) {
-  body,
-  html {
-    --page-inline-width: min(100vw, var(--page-max-width));
-  }
-}
-
 p {
   font-size: 1rem;
 }

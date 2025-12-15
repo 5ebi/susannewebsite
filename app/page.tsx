@@ -44,7 +44,7 @@ export default function Willkommen() {
         </div>
       </div>
       <div className={styles.containerMain5}></div>
-      <KontaktButton>Kontaktieren Sie mich</KontaktButton>
+      {/* <KontaktButton>Kontaktieren Sie mich</KontaktButton> */}
     </main>
   );
 }
