@@ -57,7 +57,9 @@ export default function Navbar() {
         </div>
 
         <button
-          className={`${styles.burgerButton} ${open ? styles.burgerButtonOpen : ''}`}
+          className={`${styles.burgerButton} ${
+            open ? styles.burgerButtonOpen : ''
+          }`}
           aria-expanded={open}
           aria-label="Navigation öffnen"
           aria-controls="mobile-navigation"
@@ -70,7 +72,9 @@ export default function Navbar() {
       </div>
 
       <div
-        className={`${styles.mobileOverlay} ${open ? styles.mobileOverlayOpen : ''}`}
+        className={`${styles.mobileOverlay} ${
+          open ? styles.mobileOverlayOpen : ''
+        }`}
         onClick={closeMenu}
       ></div>
 
@@ -86,22 +90,38 @@ export default function Navbar() {
             </Link>
           </li>
           <li>
-            <Link className={styles.link} href={'/psychotherapie'} onClick={closeMenu}>
+            <Link
+              className={styles.link}
+              href={'/psychotherapie'}
+              onClick={closeMenu}
+            >
               Psychotherapie
             </Link>
           </li>
           <li>
-            <Link className={styles.link} href={'/musiktherapie'} onClick={closeMenu}>
+            <Link
+              className={styles.link}
+              href={'/musiktherapie'}
+              onClick={closeMenu}
+            >
               Musiktherapie
             </Link>
           </li>
           <li>
-            <Link className={styles.link} href={'/uebermich'} onClick={closeMenu}>
+            <Link
+              className={styles.link}
+              href={'/uebermich'}
+              onClick={closeMenu}
+            >
               Über mich
             </Link>
           </li>
           <li>
-            <Link className={styles.link} href={'/rahmenbedingungen'} onClick={closeMenu}>
+            <Link
+              className={styles.link}
+              href={'/rahmenbedingungen'}
+              onClick={closeMenu}
+            >
               Rahmenbedingungen
             </Link>
           </li>
