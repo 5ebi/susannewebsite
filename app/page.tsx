@@ -1,7 +1,6 @@
 import styles from './page.module.css';
 import Image from 'next/image';
 import susanne from '@/public/images/susanne-rusch-psychotherapie.webp';
-import praxis from '@/public/images/Praxis4.jpg';
 import KontaktButton from './components/KontaktButton';
 
 export default function Willkommen() {
@@ -21,8 +20,8 @@ export default function Willkommen() {
           </div>
           <section className={styles.spruchContainer}>
             <p className={styles.spruch}>
-              in meiner Praxis für Psychotherapie und Musiktherapie in 1200
-              Wien! <br />
+              in meiner Praxis für <strong>Psychotherapie</strong> <br></br> und
+              <strong> Musiktherapie</strong> in 1200 Wien! <br />
             </p>
             <p className={styles.spruch}>
               Meine Name ist Susanne Rusch und ich freue mich, Sie auf meiner
@@ -44,7 +43,9 @@ export default function Willkommen() {
         </div>
       </div>
       <div className={styles.containerMain5}></div>
-      {/* <KontaktButton>Kontaktieren Sie mich</KontaktButton> */}
+      <KontaktButton className={styles.kontaktButton}>
+        Interesse geweckt? Kontaktieren Sie mich hier
+      </KontaktButton>
     </main>
   );
 }

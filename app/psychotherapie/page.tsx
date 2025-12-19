@@ -6,7 +6,7 @@ export default function Psychotherapie() {
   return (
     <main className={styles.containerMain}>
       <h1 className={styles.heading}>
-        Psychotherapie – Integrative Gestalttherapie
+        Psychotherapie <br></br>Integrative Gestalttherapie
       </h1>
       <div className={styles.containerMain2}>
         <div className={styles.containerText}>

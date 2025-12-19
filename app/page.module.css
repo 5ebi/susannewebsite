@@ -5,6 +5,7 @@
   width: var(--page-inline-width);
   margin-inline: auto;
   /* border: 1px solid var(--color1_1); */
+  /* background-color: blueviolet; */
 }
 .containerMain2 {
   width: var(--page-inline-width);
@@ -17,9 +18,9 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-bottom: 6rem;
+  margin-bottom: 4rem;
   gap: 2rem;
-  /* background-color: red; */
+  /* background-color: blue; */
   width: var(--page-inline-width);
 }
 
@@ -27,7 +28,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   /* background-color: red; */
   width: var(--page-inline-width);
 }
@@ -35,11 +36,35 @@
 .containerMain5 {
   display: flex;
   flex-direction: column;
-  max-width: 33rem;
+  max-width: 35rem;
   margin-bottom: 2rem;
   opacity: 0.9;
   text-align: center;
 }
+
+.kontaktButton {
+  /* display: flex;
+  align-items: center; */
+}
+
+.kontaktButton:hover {
+  /* background-color: var(--color1);
+  color: var(--color2);
+  opacity: 1;
+  border: solid 1px var(--color1);
+  opacity: 0.9; */
+}
+
+.heading {
+  font-size: clamp(1rem, 1rem + 3vw, 2.8rem);
+  font-weight: 200;
+  padding-bottom: 3rem;
+  letter-spacing: 1px;
+  opacity: 1;
+  margin-top: 1rem;
+  margin-bottom: 0rem;
+}
+
 .image {
   width: 35rem;
   height: auto;
@@ -52,6 +77,7 @@
   background-color: var(--color1_2);
   height: 1px;
   border: none;
+  opacity: 0;
 }
 
 .spruchContainer {
@@ -59,14 +85,15 @@
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  max-width: 35rem;
+  width: 35rem;
   box-shadow: 0px 2px 20px -3px var(--color1_3);
   border-radius: 1rem;
-  padding: 2rem 2rem;
+  padding: 2.5rem 2.5rem;
   margin-bottom: 20px;
-  min-height: 14rem;
+
   max-height: 24rem;
   align-self: center;
+
   /* background: #fac38822; */
 
   /* background-color: blue; */
@@ -78,20 +105,21 @@
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  max-width: 40rem;
+  width: 40rem;
   padding: 2rem 2rem 2rem 2rem;
   min-height: 9.5rem;
   border-radius: 1.25rem;
-  /* border: 1px solid var(--color1_3); */
+  /* border: 1px solid var(--color1_2); */
   /* box-shadow: 0px 2px 25px -10px var(--color1_4); */
   /* background: radial-gradient(var(--color1_3), var(--color2)); */
   overflow: hidden;
   align-self: center;
   margin-top: 1rem;
+  /* background-color: aquamarine; */
 }
 
 .spruch {
-  font-size: 1.35rem;
+  font-size: 1.25rem;
   font-weight: 300;
   color: var(--color1);
   opacity: 1;
@@ -106,67 +134,63 @@
 .spruch2 {
   position: relative;
   z-index: 1;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   /* letter-spacing: 1px; */
-  font-family: bioRhyme;
-  font-weight: 300;
+  font-family: lora;
+  font-weight: 100;
   /* font-style: italic; */
   color: var(--color1);
-  opacity: 1;
+  opacity: 0.95;
   text-align: center;
-  box-shadow: 10px;
 
-  /* line-height: 2rem; */
+  line-height: 1.5rem;
 }
 
 .spruch2_1 {
   position: relative;
   z-index: 1;
-  font-size: 1rem;
+  /* font-family: bioRhyme; */
+  font-size: 0.9rem;
   /* letter-spacing: 1px; */
-  font-weight: 400;
+  font-weight: 300;
   /* font-style: italic; */
   color: var(--color1);
   opacity: 1;
   text-align: right;
-  padding-top: 1rem;
+  padding-top: 0.3rem;
+  /* padding-right: 0.5rem; */
 
   /* line-height: 2rem; */
-}
-
-.heading {
-  font-size: 3.5rem;
-  font-weight: 200;
-  padding-bottom: 3rem;
-  letter-spacing: 1px;
-  opacity: 1;
-  margin-top: 1rem;
-  margin-bottom: 0rem;
 }
 
 @media (max-width: 1023px) {
   .containerMain3 {
     flex-direction: column;
     align-items: center;
+    margin-bottom: 0rem;
+    gap: 2rem;
   }
 
-  .spruchContainer {
-    width: 100%;
+  .spruchContainer,
+  .spruchContainer2 {
+    max-width: 35rem;
+    width: 80vw;
     box-shadow: none;
+    padding: 0;
   }
 
   .image {
     max-width: 80vw;
   }
 
-  .heading {
-    font-size: 2.8rem;
-  }
+  /* .heading {
+    font-size: 6vw;
+  } */
 }
 
 @media (max-width: 450px) {
   .image {
-    max-width: 90vw;
+    max-width: 80vw;
   }
 
   .containerMain,
@@ -176,9 +200,9 @@
     max-width: 100%;
   }
 
-  .heading {
-    font-size: 1.8rem;
-  }
+  /* .heading {
+    font-size: 1.7rem;
+  } */
 
   .image2 {
     object-fit: cover;
@@ -191,5 +215,22 @@
   }
   .containerMain5 {
     width: 20rem;
+  }
+  .spruch {
+    font-size: 1rem;
+  }
+  .spruch2 {
+    font-size: 0.9rem;
+
+    font-family: lora;
+    font-weight: 400;
+    /* background-color: aqua; */
+  }
+  .spruchContainer,
+  .spruchContainer2 {
+    width: 85vw;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
   }
 }

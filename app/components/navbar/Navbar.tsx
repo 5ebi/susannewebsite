@@ -66,32 +66,26 @@ export default function Navbar() {
           onClick={toggleMenu}
         >
           <span className={styles.burgerLine}></span>
-          <span className={styles.burgerLine}></span>
+
           <span className={styles.burgerLine}></span>
         </button>
       </div>
 
+      {/* Mobile-Menü jetzt IN der .navbar */}
       <div
-        className={`${styles.mobileOverlay} ${
-          open ? styles.mobileOverlayOpen : ''
-        }`}
-        onClick={closeMenu}
-      ></div>
-
-      <div
-        id="mobile-navigation"
         className={`${styles.mobileMenu} ${open ? styles.mobileMenuOpen : ''}`}
+        id="mobile-navigation"
         aria-hidden={!open}
       >
         <ul className={styles.navItemsMobile}>
           <li>
-            <Link className={styles.link} href={'/'} onClick={closeMenu}>
+            <Link className={styles.link3} href={'/'} onClick={closeMenu}>
               Willkommen
             </Link>
           </li>
           <li>
             <Link
-              className={styles.link}
+              className={styles.link3}
               href={'/psychotherapie'}
               onClick={closeMenu}
             >
@@ -100,7 +94,7 @@ export default function Navbar() {
           </li>
           <li>
             <Link
-              className={styles.link}
+              className={styles.link3}
               href={'/musiktherapie'}
               onClick={closeMenu}
             >
@@ -109,7 +103,7 @@ export default function Navbar() {
           </li>
           <li>
             <Link
-              className={styles.link}
+              className={styles.link3}
               href={'/uebermich'}
               onClick={closeMenu}
             >
@@ -118,7 +112,7 @@ export default function Navbar() {
           </li>
           <li>
             <Link
-              className={styles.link}
+              className={styles.link3}
               href={'/rahmenbedingungen'}
               onClick={closeMenu}
             >

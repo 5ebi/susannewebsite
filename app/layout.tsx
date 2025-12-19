@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Noto_Sans_JP, BioRhyme } from 'next/font/google';
+import { Noto_Sans_JP, BioRhyme, Lora } from 'next/font/google';
 import './globals.css';
 import Footer from './components/footer/Footer';
 import Navbar from './components/navbar/Navbar';
@@ -13,6 +13,11 @@ const notoSansJP = Noto_Sans_JP({
 
 const bioRhyme = BioRhyme({
   variable: '--font-biorhyme',
+  subsets: ['latin'],
+});
+
+const lora = Lora({
+  variable: '--font-lora',
   subsets: ['latin'],
 });
 
@@ -37,7 +42,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://maps.gstatic.com" crossOrigin="" />
       </head>
       <body
-        className={`${notoSansJP.variable} ${bioRhyme.variable}`}
+        className={`${notoSansJP.variable} ${bioRhyme.variable} ${lora.variable}`}
         style={{
           display: 'flex',
           flexDirection: 'column',
