@@ -4,11 +4,11 @@
   --color1_1: #2c6981d5;
   --color1_2: #2c698161;
   --color1_3: #2c698138;
-  --color1_4: #2c69811d;
+  --color1_4: #2c698129;
   --color1_5: #2c69810f;
-  --color2: #fbf5ed;
-  --color2_1: #fff7f147;
-  --color3: #154048;
+  --color2: #fcf6ef;
+  --color2_1: #fbf5edb9;
+  --color3: #060a0a;
   --color3_1: #154048af;
   --color4: #e8a87c;
   --color4_1: #e8a77c23;
@@ -62,7 +62,7 @@ ul {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 1.8rem;
   font-weight: 400;
   padding-bottom: 2rem;
   padding-top: 2rem;

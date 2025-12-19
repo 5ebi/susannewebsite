@@ -41,7 +41,6 @@
 .navItems {
   display: flex;
   align-items: center;
-  gap: 24px;
   font-size: 16px;
   font-weight: 400;
   justify-content: center;
@@ -49,6 +48,7 @@
   color: var(--color1);
   padding-left: 0rem;
   margin: 0;
+  /* gap: 0.2rem; */
 }
 
 .mobileKontakt {
@@ -77,20 +77,26 @@
 }
 
 .link {
+  position: relative;
   display: flex;
+  opacity: 0.8;
+  padding: 6px 10px 8px 10px;
+  background-color: transparent;
+  text-decoration: none;
+  color: var(--color1);
+  border-radius: 12px;
+  transition: color 0.15s ease, opacity 0.15s ease, background-color 0.15s ease;
+}
+
+.linkActive {
   opacity: 1;
-  text-decoration: underline;
-  text-decoration-color: transparent;
-  text-underline-offset: 2px;
-  text-decoration-thickness: 0.05em;
-  transition: text-decoration-color 0.2s ease, color 0.2s ease;
+  color: var(--color1);
+  font-weight: 400;
 }
 
 .link:hover {
-  color: var(--color3);
-  opacity: 0.9;
-  text-decoration-color: var(--color3_1);
-  text-decoration-thickness: 0.01em;
+  color: var(--color1);
+  opacity: 1;
 }
 
 .link2 {

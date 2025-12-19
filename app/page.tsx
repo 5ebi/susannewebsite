@@ -30,22 +30,21 @@ export default function Willkommen() {
           </section>
         </div>
         <div className={styles.containerMain4}>
-          <hr className={styles.divider} />
+          {/* <hr className={styles.divider} /> */}
           <div className={styles.spruchContainer2}>
             <div>
               <p className={styles.spruch2}>
                 „Du nimmst das, was da ist, und du nimmst es so, wie es ist,
                 <br></br>was immer auch daraus werden mag.“
               </p>
-              <p className={styles.spruch2_1}>Lore Perls</p>
+              <p className={styles.spruch2_1}>- Lore Perls</p>
             </div>
           </div>
         </div>
       </div>
-      <div className={styles.containerMain5}></div>
-      <KontaktButton className={styles.kontaktButton}>
+      {/* <KontaktButton className={styles.kontaktButton}>
         Interesse geweckt? Kontaktieren Sie mich hier
-      </KontaktButton>
+      </KontaktButton> */}
     </main>
   );
 }

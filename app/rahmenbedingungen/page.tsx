@@ -7,12 +7,12 @@ const sections = [
       'Ein unverbindliches Erstgespräch dient dem gegenseitigen Kennenlernen. Ihre Anliegen, bestehende Schwierigkeiten und auch Wünsche an eine Therapie werden besprochen. Gemeinsam finden wir heraus, ob eine Zusammenarbeit sinnvoll erscheint. Weitere Rahmenbedingungen können geklärt werden. Die Kosten dafür decken sich mit denen einer regulären Therapieeinheit.',
     ],
   },
-  {
-    title: 'Frequenz',
-    paragraphs: [
-      'Die Therapieeinheiten finden normalerweise wöchentlich statt. Vor allem zu Beginn einer Therapie ist dies für den Aufbau einer vertrauensvollen therapeutischen Beziehung sehr sinnvoll. Ein Anpassen ist im Laufe des Prozesses möglich.',
-    ],
-  },
+  // {
+  //   title: 'Frequenz',
+  //   paragraphs: [
+  //     'Die Therapieeinheiten finden normalerweise wöchentlich statt. Vor allem zu Beginn einer Therapie ist dies für den Aufbau einer vertrauensvollen therapeutischen Beziehung sehr sinnvoll. Ein Anpassen ist im Laufe des Prozesses möglich.',
+  //   ],
+  // },
   {
     title: 'Kosten',
     paragraphs: [

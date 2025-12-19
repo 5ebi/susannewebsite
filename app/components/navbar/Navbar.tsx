@@ -5,10 +5,16 @@ import logo2 from '@/public/images/logo.png';
 import Image from 'next/image';
 import Link from 'next/link';
 import KontaktButton from '../KontaktButton';
+import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+
+  const isActive = (href: string) =>
+    href === '/' ? pathname === '/' : pathname.startsWith(href);
+
   const toggleMenu = () => setOpen((prev) => !prev);
   const closeMenu = () => setOpen(false);
 
@@ -26,27 +32,52 @@ export default function Navbar() {
         <div className={styles.navItemsDiv}>
           <ul className={styles.navItems}>
             <li>
-              <Link className={styles.link} href={'/'}>
+              <Link
+                className={`${styles.link} ${
+                  isActive('/') ? styles.linkActive : ''
+                }`}
+                href={'/'}
+              >
                 Willkommen
               </Link>
             </li>
             <li>
-              <Link className={styles.link} href={'/psychotherapie'}>
+              <Link
+                className={`${styles.link} ${
+                  isActive('/psychotherapie') ? styles.linkActive : ''
+                }`}
+                href={'/psychotherapie'}
+              >
                 Psychotherapie
               </Link>
             </li>
             <li>
-              <Link className={styles.link} href={'/musiktherapie'}>
+              <Link
+                className={`${styles.link} ${
+                  isActive('/musiktherapie') ? styles.linkActive : ''
+                }`}
+                href={'/musiktherapie'}
+              >
                 Musiktherapie
               </Link>
             </li>
             <li>
-              <Link className={styles.link} href={'/uebermich'}>
+              <Link
+                className={`${styles.link} ${
+                  isActive('/uebermich') ? styles.linkActive : ''
+                }`}
+                href={'/uebermich'}
+              >
                 Über mich
               </Link>
             </li>
             <li>
-              <Link className={styles.link} href={'/rahmenbedingungen'}>
+              <Link
+                className={`${styles.link} ${
+                  isActive('/rahmenbedingungen') ? styles.linkActive : ''
+                }`}
+                href={'/rahmenbedingungen'}
+              >
                 Rahmenbedingungen
               </Link>
             </li>
@@ -71,7 +102,6 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile-Menü jetzt IN der .navbar */}
       <div
         className={`${styles.mobileMenu} ${open ? styles.mobileMenuOpen : ''}`}
         id="mobile-navigation"

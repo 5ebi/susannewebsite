@@ -39,11 +39,6 @@
   line-height: 1.6;
 }
 
-.heading {
-  font-size: 2rem;
-  align-self: flex-start;
-}
-
 @media (max-width: 1024) {
   .containerMain2 {
     flex-direction: column;

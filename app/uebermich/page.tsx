@@ -3,8 +3,8 @@ import styles from './page.module.css';
 import portraitImage from '@/public/images/susanne-rusch-face.jpg';
 
 const arbeitserfahrung = [
-  'Lehrmusiktherapeutin am Institut für Musiktherapie, mdw',
   'Psychotherapeutin und Musiktherapeutin in freier Praxis mit Kindern, Jugendlichen und Erwachsenen',
+  'Lehrmusiktherapeutin am Institut für Musiktherapie, mdw',
   'Praktikumsleitung und Supervision am Institut für Musiktherapie, mdw',
   'Musiktherapie Universitätsklinikum Tulln, Abteilung für Kinder- und Jugendpsychiatrie und Psychotherapie',
   'Musiktherapie KH Hietzing/Rosenhügel, Neuropsychiatrische Abteilung für Kinder und Jugendliche mit Behindertenzentrum',
