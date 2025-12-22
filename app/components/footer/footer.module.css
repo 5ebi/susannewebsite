@@ -2,7 +2,7 @@
   background-color: var(--color1);
   display: flex;
   justify-content: center;
-  height: 80px;
+  height: 4rem;
   align-items: center;
   margin-top: 1.5rem;
   border-top: solid 1px;
@@ -11,7 +11,7 @@
 
 .footerItems {
   display: flex;
-  gap: 40px;
+  gap: 2rem;
   /* margin-right: 1rem; */
   align-items: center;
 }
@@ -20,6 +20,7 @@
   display: flex;
   opacity: 1;
   transition: color 0.2s ease;
+  font-size: 0.9rem;
 }
 
 .link:hover {

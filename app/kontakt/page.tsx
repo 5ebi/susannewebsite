@@ -29,7 +29,7 @@ export default function Kontakt() {
             title="Praxisstandort Hannovergasse"
             src="https://www.google.com/maps?q=Hannovergasse%2016/3,%201200%20Wien&output=embed"
             allowFullScreen
-            loading="lazy"
+            loading="eager"
             referrerPolicy="no-referrer-when-downgrade"
           />
         </div>

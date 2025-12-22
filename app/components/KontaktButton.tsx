@@ -21,6 +21,7 @@ export default function KontaktButton({
       href="/kontakt"
       style={style}
       onClick={onClick}
+      prefetch={true}
     >
       {children}
     </Link>

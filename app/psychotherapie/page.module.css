@@ -25,6 +25,7 @@
   text-align: left;
   align-self: left;
   /* flex-grow: 1; */
+  color: var(--color3);
 }
 
 .image {
