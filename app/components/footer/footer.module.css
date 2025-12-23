@@ -6,7 +6,7 @@
   align-items: center;
   margin-top: 1.5rem;
   border-top: solid 1px;
-  color: var(--color2_1);
+  color: var(--color2);
 }
 
 .footerItems {
@@ -24,6 +24,6 @@
 }
 
 .link:hover {
-  color: var(--color2);
+  color: var(--color2_1);
   opacity: 0.9;
 }

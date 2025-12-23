@@ -1,41 +1,84 @@
+import type { Metadata } from 'next';
 import Image from 'next/image';
 import styles from './page.module.css';
-import praxis3 from '@/public/images/praxis3.jpg';
+import Kalimba from '@/public/images/Praxis-Sanni_Kalimba.webp';
+import Kantele from '@/public/images/Praxis-Sanni_Kantele.webp';
+import SpringTongueDrum from '@/public/images/Praxis-Sanni_Spring Tongue Drum.webp';
+
+export const metadata: Metadata = {
+  title: 'Musiktherapie in Wien (1200)',
+  description:
+    'Musiktherapie in Wien-Brigittenau (1200): Improvisation auf leicht spielbaren Instrumenten – ohne musikalische Vorerfahrung. Termine nach Vereinbarung.',
+  alternates: { canonical: '/musiktherapie' },
+};
 
 export default function Musiktherapie() {
   return (
-    <main className={styles.containerMain}>
+    <main className={styles.page}>
       <h1 className={styles.heading}>Musiktherapie</h1>
-      <div className={styles.containerMain2}>
-        <div className={styles.containerText}>
+      <section className={styles.section}>
+        <div className={styles.textTop}>
           <p>
-            So wie in der Gestalttherapie steht auch in der Musiktherapie das
-            eigene Erleben im Hier und Jetzt im Vordergrund. Auf leicht
-            spielbaren Instrumenten, mit der eigenen Stimme oder dem bewusst
-            eingesetzten Hören von Musik können Gefühle und Stimmungen hörbar
-            gemacht werden, für die es vielleicht (noch) keine Sprache gibt.
-            Dabei sind keinerlei musikalische Vorkenntnisse von Nöten. Das
-            musikalisch Erlebte wird je nach Möglichkeit verbal reflektiert, um
-            unterschiedliche Gefühlslagen und innere Prozesse bewusst zu machen.{' '}
-            <br></br>
-            <br></br>
-            Die musikalische Erfahrung schafft einen sicheren, kreativen Raum,
-            in dem eigene Gefühle und Erfahrungen gespürt, verstanden und
-            verarbeitet werden können. Musiktherapie kann so helfen,
-            Selbstwahrnehmung, Ausdrucksfähigkeit und emotionale Balance zu
-            stärken und neue Perspektiven zu entdecken.
+            In der Musiktherapie stehen uns unterschiedliche, leicht spielbare
+            Instrumente zur Verfügung. Beim gemeinsamen Improvisieren können
+            Gefühle und Stimmungen hörbar werden, für die es vielleicht (noch)
+            keine Sprache gibt. Musikalische Vorerfahrung ist hierbei nicht von
+            Nöten.
+          </p>
+          <p>
+            Das musikalisch Erlebte wird je nach Möglichkeit verbal reflektiert,
+            um unterschiedliche Gefühlslagen und innere Prozesse bewusst zu
+            machen.
           </p>
         </div>
-        <div>
+        <figure className={styles.media}>
           <Image
-            src={praxis3}
+            src={Kalimba}
             priority
-            alt="Praxis von Magistra Susanne Rusch in 1200 Wien"
+            sizes="(max-width: 900px) 100vw, 45vw"
+            alt="Kalimba im Praxisraum"
             className={styles.image}
           />
-          <p className="photoDescription">Foto Beschreibung</p>
+          <figcaption className={styles.caption}>Kalimba</figcaption>
+        </figure>
+        <div className={styles.textBottom}>
+          <p>
+            Die musikalische Erfahrung im geschützten Rahmen schafft einen Raum,
+            in dem eigene Gefühle und Erfahrungen gespürt, verstanden und
+            bearbeitet werden können. Hierbei steht stets das eigene Erleben im
+            Hier und Jetzt im Vordergrund. Musiktherapie kann so helfen, die
+            eigene Selbstwahrnehmung und Ausdrucksfähigkeit zu stärken,
+            emotionale Balance herzustellen sowie neue Lebensperspektiven zu
+            entdecken.
+          </p>
         </div>
-      </div>
+      </section>
+
+      <section className={styles.gallerySection} aria-label="Instrumente">
+        <h2 className={styles.galleryHeading}>Weitere Instrumente</h2>
+        <div className={styles.gallery}>
+          <figure className={styles.card}>
+            <Image
+              src={Kantele}
+              sizes="(max-width: 900px) 50vw, 30vw"
+              alt="Kantele im Praxisraum"
+              className={styles.cardImage}
+            />
+            <figcaption className={styles.caption}>Kantele</figcaption>
+          </figure>
+          <figure className={styles.card}>
+            <Image
+              src={SpringTongueDrum}
+              sizes="(max-width: 900px) 50vw, 30vw"
+              alt="Spring Tongue Drum im Praxisraum"
+              className={styles.cardImage}
+            />
+            <figcaption className={styles.caption}>
+              Spring Tongue Drum
+            </figcaption>
+          </figure>
+        </div>
+      </section>
     </main>
   );
 }

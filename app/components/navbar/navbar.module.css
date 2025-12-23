@@ -41,11 +41,9 @@
 .navItems {
   display: flex;
   align-items: center;
-  font-size: 16px;
-  font-weight: 400;
+  font-weight: 350;
   justify-content: center;
   flex: 1;
-  color: var(--color1);
   padding-left: 0rem;
   margin: 0;
   /* gap: 0.2rem; */
@@ -83,7 +81,7 @@
   padding: 6px 10px 8px 10px;
   background-color: transparent;
   text-decoration: none;
-  color: var(--color1);
+  color: var(--color3);
   border-radius: 12px;
   transition: color 0.15s ease, opacity 0.15s ease, background-color 0.15s ease;
 }
@@ -91,12 +89,17 @@
 .linkActive {
   opacity: 1;
   color: var(--color1);
-  font-weight: 400;
+
+  text-decoration-line: underline;
+  text-decoration-color: var(--color1_1);
+  text-decoration-thickness: 1px;
+  text-decoration-style: solid;
+  text-underline-offset: 3px;
 }
 
 .link:hover {
   color: var(--color1);
-  opacity: 0.7;
+  opacity: 1;
 }
 
 .link2 {
@@ -106,7 +109,7 @@
   opacity: 1;
   border: solid 1px var(--color1);
   transition: cubic-bezier(0, 0, 0, 1) 0.2s;
-  padding: 8 10 10 10px;
+  padding: 8px 10px 10px;
   line-height: 1;
   font-weight: 500;
   background-color: var(--color1);
@@ -123,11 +126,11 @@
   display: inline-flex;
   align-items: center;
   border-radius: 20px;
-  opacity: 0.9;
+  opacity: 1;
   transition: 0.2s;
-  padding: 8 10 10 10px;
+  padding: 8px 10px 10px;
   line-height: 1;
-  font-weight: 500;
+  font-weight: 300;
   background-color: var(--color2);
   color: var(--color1);
   border: 1px solid rgba(0, 0, 255, 0);
@@ -141,28 +144,42 @@
 }
 
 .burgerButton {
-  width: 30px;
-  height: 30px;
+  width: 34px;
+  height: 34px;
   background: none;
+  background-color: transparent;
+  appearance: none;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
   display: flex;
   flex-direction: column;
   border: none;
   align-content: center;
   justify-content: center;
-  gap: 6px;
+  gap: 8px;
   padding: 0;
   cursor: pointer;
   position: relative;
   z-index: 1002;
 }
 
+.burgerButton:focus {
+  outline: none;
+}
+
+.burgerButton:focus-visible {
+  outline: 2px solid var(--color1_2);
+  outline-offset: 4px;
+  border-radius: 8px;
+}
+
 .burgerLine {
   will-change: transform, opacity;
   width: 100%;
-  height: 3px;
-  border-radius: 3px;
+  height: 2px;
+  border-radius: 2px;
   background-color: var(--color1);
-  transition: transform 0.2s ease, opacity 0.2s ease-out; /* Dauer auf 0.2s reduziert */
+  transition: transform 0.2s ease;
 }
 
 .burgerButtonOpen .burgerLine:nth-child(1) {
@@ -244,7 +261,7 @@
 
 @media (max-width: 1023px) {
   .navItemsMobile {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .navButton {
@@ -271,7 +288,7 @@
 }
 
 @media (max-width: 450px) {
-  /* .navbar {
-    padding-inline: 2rem;
-  } */
+  .link3 {
+    padding: 0.7rem 0 0 0;
+  }
 }

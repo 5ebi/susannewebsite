@@ -32,12 +32,7 @@ export default function Navbar() {
         <div className={styles.navItemsDiv}>
           <ul className={styles.navItems}>
             <li>
-              <Link
-                className={`${styles.link} ${
-                  isActive('/') ? styles.linkActive : ''
-                }`}
-                href={'/'}
-              >
+              <Link className={styles.link} href={'/'}>
                 Willkommen
               </Link>
             </li>

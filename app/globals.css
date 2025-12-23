@@ -6,9 +6,9 @@
   --color1_3: #2c698138;
   --color1_4: #2c698129;
   --color1_5: #2c69810f;
-  --color2: #f8f4ed;
+  --color2: #fdf9f3;
   --color2_1: #fbf5ed99;
-  --color3: #154048;
+  --color3: #143c43;
   --color3_1: #154048af;
   --color4: #e8a87c;
   --color4_1: #e8a77c23;
@@ -27,7 +27,7 @@
   --hellerSand: #f2b880;
 
   /*Widths*/
-  --page-max-width: 1200px;
+  --page-max-width: 1000px;
   --page-inline-width: min(90vw, var(--page-max-width));
   --tablet-breakpoint-width: 1024px;
   --phone-breakpoint-width: 768px;
@@ -71,18 +71,17 @@ h1 {
 }
 
 .photoDescription {
-  font-size: 0.9rem;
+  font-size: clamp(0.7rem, 0rem + 3vw, 0.9rem);
   opacity: 0.9;
-  color: var(--color1);
+  color: var(--color3);
   text-align: left;
   padding-left: 0.8rem;
 }
 
 .photoDescriptionRight {
-  font-size: 0.9rem;
-  opacity: 0.9;
-  color: var(--color1);
-
+  font-size: clamp(0.7rem, 1rem + 3vw, 0.9rem);
+  opacity: 0.8;
+  color: var(--color3);
   padding-right: 0.8rem;
   text-align: right;
 }
@@ -95,4 +94,21 @@ h1 {
 
 p {
   font-size: 1rem;
+  line-height: 1.65;
+  color: var(--color3);
+  font-weight: 300;
+}
+
+h2 {
+  opacity: 1;
+  color: var(--color3);
+}
+
+h3 {
+  font-weight: 400;
+}
+
+.blue {
+  color: var(--color1);
+  font-weight: 400;
 }

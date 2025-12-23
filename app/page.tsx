@@ -1,15 +1,22 @@
+import type { Metadata } from 'next';
 import styles from './page.module.css';
 import Image from 'next/image';
 import susanne from '@/public/images/susanne-rusch-psychotherapie.webp';
 import KontaktButton from './components/KontaktButton';
 
+export const metadata: Metadata = {
+  title: 'Psychotherapie & Musiktherapie in Wien (1200)',
+  description:
+    'Praxis für Psychotherapie (Integrative Gestalttherapie) und Musiktherapie in Wien-Brigittenau (1200). Termine nach Vereinbarung – Kontakt online oder telefonisch.',
+  alternates: { canonical: '/' },
+};
+
 export default function Willkommen() {
   return (
     <main className={styles.containerMain}>
-      <h1 className={styles.heading}>Herzlich Willkommen</h1>
       <div className={styles.containerMain2}>
         <div className={styles.containerMain3}>
-          <div>
+          <div className={styles.imageCol}>
             <Image
               src={susanne}
               priority
@@ -19,12 +26,14 @@ export default function Willkommen() {
             <p className="photoDescription"> Mag.ª Susanne Rusch</p>
           </div>
           <section className={styles.spruchContainer}>
+            <h1 className={styles.heading}>Herzlich Willkommen</h1>
             <p className={styles.spruch}>
-              in meiner Praxis für <strong>Psychotherapie</strong> <br></br> und
-              <strong> Musiktherapie</strong> in 1200 Wien! <br />
+              in meiner Praxis für <span className="blue">Psychotherapie </span>
+              und
+              <span className="blue"> Musiktherapie</span> in 1200 Wien!
             </p>
             <p className={styles.spruch}>
-              Meine Name ist Susanne Rusch und ich freue mich, Sie auf meiner
+              Mein Name ist Susanne Rusch und ich freue mich, Sie auf meiner
               Webseite begrüßen zu dürfen.
             </p>
           </section>
@@ -42,9 +51,20 @@ export default function Willkommen() {
           </div>
         </div>
       </div>
-      {/* <KontaktButton className={styles.kontaktButton}>
-        Interesse geweckt? Kontaktieren Sie mich hier
-      </KontaktButton> */}
+      <section className={styles.spruchContainer3}>
+        <h2 className={styles.ctaHeading}>
+          Psychotherapie & Musiktherapie in Wien-Brigittenau
+        </h2>
+        <p className={styles.ctaText}>
+          In meiner Praxis in der Hannovergasse begleite ich Jugendliche und
+          Erwachsene im Einzelsetting. Wenn Sie Fragen haben oder einen Termin
+          vereinbaren möchten, melden Sie sich gerne telefonisch oder per
+          E-Mail.
+        </p>
+        <div className={styles.ctaButton}>
+          <KontaktButton>Termin anfragen</KontaktButton>
+        </div>
+      </section>
     </main>
   );
 }

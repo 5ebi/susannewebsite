@@ -1,39 +1,12 @@
+import type { Metadata } from 'next';
 import styles from './page.module.css';
 
-const sections = [
-  {
-    title: 'Erstgespräch',
-    paragraphs: [
-      'Ein unverbindliches Erstgespräch dient dem gegenseitigen Kennenlernen. Ihre Anliegen, bestehende Schwierigkeiten und auch Wünsche an eine Therapie werden besprochen. Gemeinsam finden wir heraus, ob eine Zusammenarbeit sinnvoll erscheint. Weitere Rahmenbedingungen können geklärt werden. Die Kosten dafür decken sich mit denen einer regulären Therapieeinheit.',
-    ],
-  },
-  // {
-  //   title: 'Frequenz',
-  //   paragraphs: [
-  //     'Die Therapieeinheiten finden normalerweise wöchentlich statt. Vor allem zu Beginn einer Therapie ist dies für den Aufbau einer vertrauensvollen therapeutischen Beziehung sehr sinnvoll. Ein Anpassen ist im Laufe des Prozesses möglich.',
-  //   ],
-  // },
-  {
-    title: 'Kosten',
-    paragraphs: [
-      'Eine Therapieeinheit dauert 50 Minuten.',
-      'Eine Psychotherapie-Einheit kostet 110 Euro. Bei Leidenszuständen oder Vorliegen einer krankheitswertigen Störung besteht die Möglichkeit, einen Kostenzuschuss bei der Krankenkasse zu beantragen (ÖGK zahlt 33,70 €, BVAEB 48,80 €, SVS 45,00 € pro Einheit).',
-      'Eine Musiktherapie-Einheit kostet 90 Euro. Leider ist es derzeit (noch) nicht möglich, mit der Krankenkasse zu verrechnen.',
-    ],
-  },
-  {
-    title: 'Absageregelung',
-    paragraphs: [
-      'Die Absage einer Therapieeinheit ist bis 24 Stunden vor dem Termin für Sie kostenlos. Danach muss ich die Einheit verrechnen, da ich mir die Zeit für Sie freihalte.',
-    ],
-  },
-  {
-    title: 'Verschwiegenheit',
-    paragraphs: [
-      'Als Psychotherapeutin und Musiktherapeutin unterliege ich gesetzlich der Verschwiegenheitspflicht. Ausnahmen bestehen nur im Falle akuter Selbst- und Fremdgefährdung. Die zur Qualitätssicherung dienende Supervision findet nur anonymisiert bei Therapeut*innen statt, die ebenfalls der Schweigepflicht unterliegen.',
-    ],
-  },
-];
+export const metadata: Metadata = {
+  title: 'Rahmenbedingungen, Kosten & Erstgespräch',
+  description:
+    'Informationen zu Erstgespräch, Dauer, Kosten, möglichem Kostenzuschuss, Absageregelung und Verschwiegenheit. Praxis in Wien (1200).',
+  alternates: { canonical: '/rahmenbedingungen' },
+};
 
 export default function Rahmenbedingungen() {
   return (
@@ -46,14 +19,59 @@ export default function Rahmenbedingungen() {
         </p>
       </div>
       <div className={styles.sections}>
-        {sections.map((section) => (
-          <section key={section.title}>
-            <h2>{section.title}</h2>
-            {section.paragraphs.map((text, index) => (
-              <p key={index}>{text}</p>
-            ))}
-          </section>
-        ))}
+        <section>
+          <h2>Erstgespräch</h2>
+          <p>
+            Ein unverbindliches Erstgespräch dient dem gegenseitigen
+            Kennenlernen. Ihre Anliegen, bestehende Schwierigkeiten und Wünsche
+            an eine Therapie werden besprochen, offene Fragen können geklärt
+            werden. Gemeinsam finden wir heraus, ob eine Zusammenarbeit sinnvoll
+            erscheint. Die Kosten für ein Erstgespräch decken sich mit denen
+            einer regulären Therapieeinheit.
+          </p>
+        </section>
+        {/* <section>
+          <h2>Frequenz</h2>
+          <p>
+            Die Therapieeinheiten finden normalerweise wöchentlich statt. Vor
+            allem zu Beginn einer Therapie ist dies für den Aufbau einer
+            vertrauensvollen therapeutischen Beziehung sehr sinnvoll. Ein
+            Anpassen ist im Laufe des Prozesses möglich.
+          </p>
+        </section> */}
+        <section>
+          <h2>Kosten</h2>
+          <p>Eine Therapieeinheit dauert 50 Minuten.</p>
+          <p>
+            Eine Psychotherapie-Einheit kostet 110 Euro. Bei Vorliegen eines
+            Leidenszustands oder einer krankheitswertigen Störung besteht die
+            Möglichkeit, einen Kostenzuschuss bei der Krankenkasse zu
+            beantragen. Je nach Krankenkasse werden zwischen 33,70 Euro und
+            48,80 Euro pro Einheit rückerstattet.
+          </p>
+          <p>
+            Eine Musiktherapie-Einheit kostet 90 Euro. Leider ist es derzeit
+            (noch) nicht möglich, mit der Krankenkasse zu verrechnen.
+          </p>
+        </section>
+        <section>
+          <h2>Absageregelung</h2>
+          <p>
+            Die Absage einer Therapieeinheit ist bis 24 Stunden vor dem Termin
+            für Sie kostenlos. Danach muss ich die Einheit verrechnen, da ich
+            mir die Zeit für Sie freihalte.
+          </p>
+        </section>
+        <section>
+          <h2>Verschwiegenheit</h2>
+          <p>
+            Als Psychotherapeutin und Musiktherapeutin unterliege ich gesetzlich
+            der Verschwiegenheitspflicht. Ausnahmen bestehen nur im Falle akuter
+            Selbst- und Fremdgefährdung. Die zur Qualitätssicherung dienende
+            Supervision findet nur anonymisiert bei Therapeut*innen statt, die
+            ebenfalls der Schweigepflicht unterliegen.
+          </p>
+        </section>
       </div>
     </main>
   );

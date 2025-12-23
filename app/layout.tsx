@@ -6,6 +6,19 @@ import Navbar from './components/navbar/Navbar';
 import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 
+const normalizeSiteUrl = (value: string) => {
+  const trimmed = value.trim().replace(/\/$/, '');
+  if (/^https?:\/\//i.test(trimmed)) return trimmed;
+  return `https://${trimmed}`;
+};
+
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL
+    ? normalizeSiteUrl(process.env.NEXT_PUBLIC_SITE_URL)
+    : process.env.VERCEL_URL
+      ? `https://${process.env.VERCEL_URL}`
+      : 'https://psychotherapie-rusch.at';
+
 const notoSansJP = Noto_Sans_JP({
   variable: '--font-noto-sans-jp',
   subsets: ['latin'],
@@ -22,9 +35,22 @@ const lora = Lora({
 });
 
 export const metadata: Metadata = {
-  title: 'Praxis für Psychotherapie und Musiktherapie | Susanne Rusch',
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: 'Praxis für Psychotherapie und Musiktherapie in Wien | Susanne Rusch',
+    template: '%s | Susanne Rusch',
+  },
   description:
-    'Psychotherapie & Musiktherapie in Wien (1200) mit Mag.a Susanne Rusch. Individuelle Begleitung für Erwachsene und Jugendliche – Termin online anfragen',
+    'Psychotherapie (Integrative Gestalttherapie) und Musiktherapie in Wien-Brigittenau (1200) – Mag.ᵃ Susanne Rusch. Termine nach Vereinbarung.',
+  openGraph: {
+    title: 'Praxis für Psychotherapie und Musiktherapie in Wien | Susanne Rusch',
+    description:
+      'Psychotherapie (Integrative Gestalttherapie) und Musiktherapie in Wien-Brigittenau (1200) – Mag.ᵃ Susanne Rusch. Termine nach Vereinbarung.',
+    url: '/',
+    siteName: 'Susanne Rusch',
+    locale: 'de_AT',
+    type: 'website',
+  },
 };
 
 export default function RootLayout({

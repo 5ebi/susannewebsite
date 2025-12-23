@@ -5,16 +5,38 @@
   text-align: left;
   width: var(--page-inline-width);
   margin: 0 auto;
+  margin-bottom: 3rem;
+  padding-top: clamp(1.25rem, 2vw, 2rem);
+  gap: 2rem;
+}
+
+.heading {
+  align-self: flex-start;
+  font-size: clamp(2rem, 1.4rem + 2vw, 2.2rem);
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  color: var(--color1);
+  padding: 0;
 }
 
 .wrapper {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  align-items: flex-start;
+  gap: 2rem;
+  width: 100%;
+}
+
+.leftColumn {
   display: flex;
-  flex-direction: row;
-  gap: 5rem;
+  flex-direction: column;
+  gap: 2rem;
+  min-width: 0;
+  max-width: 36rem;
 }
 
 .address {
-  font-size: 1.2rem;
+  font-size: 2rem;
   margin-top: 0.75rem;
 }
 
@@ -22,6 +44,14 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+
+.contactDetails h3 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  padding: 0;
+  margin-bottom: 0.2rem;
+  color: var(--color3);
 }
 
 .contactDetails p {
@@ -40,20 +70,150 @@
 
 .contactDetails a {
   font-size: 1rem;
+  color: var(--color3);
+  font-weight: 300;
+}
+.contactDetails a:hover {
+  font-size: 1rem;
   color: var(--color1);
+  font-weight: 300;
 }
 
 .mapWrapper {
-  width: 40rem;
+  position: relative;
+  width: 100%;
+  max-width: 40rem;
+  min-width: 0;
   aspect-ratio: 4 / 3;
-  margin-inline: auto;
+  margin-inline: 0;
+  justify-self: end;
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 10px 45px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 18px 55px -32px var(--color3);
+  background: var(--color2);
+  border: 1px solid var(--color1_4);
+}
+
+.mapWrapper::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('/images/maps-background.webp') center/cover no-repeat;
+  filter: blur(7px);
+  z-index: 0;
+  opacity: 0.8;
 }
 
 .mapWrapper iframe {
   width: 100%;
   height: 100%;
   border: 0;
+}
+
+.mapIframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  opacity: 0;
+  transition: opacity 250ms ease;
+  position: relative;
+  z-index: 2;
+}
+
+.mapIframeVisible {
+  opacity: 1;
+}
+
+.arrival {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--color1_4);
+}
+
+.arrivalHeading {
+  font-weight: 400;
+  font-size: 1.2rem;
+  margin: 0;
+  color: var(--color3);
+}
+
+.arrivalList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin: 0;
+  padding: 0;
+}
+
+.arrivalList li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  color: var(--color3);
+  font-weight: 300;
+  line-height: 1.65;
+}
+
+.arrivalLabel {
+  font-weight: 400;
+  color: var(--color3);
+  margin-right: 0.35rem;
+}
+
+.arrivalValue {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
+}
+
+.arrivalSub {
+  color: var(--color3_1);
+}
+
+.directions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.directionsLink {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 0.6rem 0.9rem;
+  border: 1px solid var(--color1_3);
+  background: var(--color2);
+  color: var(--color3);
+  font-weight: 400;
+  transition: background-color 0.15s ease, border-color 0.15s ease,
+    color 0.15s ease;
+}
+
+.directionsLink:hover {
+  background: var(--color1_5);
+  border-color: var(--color1_2);
+  color: var(--color1);
+}
+
+@media (max-width: 900px) {
+  .wrapper {
+    gap: 2.5rem;
+    grid-template-columns: 1fr;
+  }
+
+  .leftColumn {
+    max-width: none;
+  }
+
+  .mapWrapper {
+    justify-self: start;
+    max-width: none;
+  }
+
+  /* .formRow {
+    grid-template-columns: 1fr;
+  } */
 }

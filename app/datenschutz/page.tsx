@@ -1,18 +1,22 @@
+import type { Metadata } from 'next';
 import styles from './page.module.css';
 
-const address = 'Hannovergasse 16/3, 1200 Wien';
-const phone = '+43 680 1528926';
-const email = 'info@psychotherapie-rusch.at';
+export const metadata: Metadata = {
+  title: 'Datenschutzerklärung',
+  description:
+    'Datenschutzerklärung zur Website der Praxis von Magistra Susanne Rusch für Psychotherapie und Musiktherapie in Wien (1200): Server-Logfiles, Kontaktaufnahme und Rechte nach DSGVO.',
+  alternates: { canonical: '/datenschutz' },
+};
 
 export default function Datenschutz() {
   return (
     <main className={styles.wrapper}>
       <div className={styles.intro}>
         <h1 className={styles.heading}>Datenschutzerklärung</h1>
-        <p className={styles.lead}>
-          Keine Cookies, kein Tracking. Ich verarbeite nur die Daten, die für
-          den Betrieb der Website, Ihre Kontaktaufnahme und die Durchführung der
-          Therapie notwendig sind.
+        <p>
+          Ich verarbeite nur die Daten, die für den Betrieb der Website, Ihre
+          Kontaktaufnahme und die Durchführung der Therapie notwendig sind. Ich
+          setze keine eigenen Cookies zu Tracking-Zwecken ein.
         </p>
       </div>
 
@@ -22,17 +26,19 @@ export default function Datenschutz() {
           <p>
             Mag. Susanne Rusch · Psychotherapeutin und Musiktherapeutin
             <br />
-            {address}
-          </p>
-          <p>
-            Telefon: <a href={`tel:${phone.replace(/\s+/g, '')}`}>{phone}</a>
+            Hannovergasse 16/3, 1200 Wien
             <br />
-            E-Mail: <a href={`mailto:${email}`}>{email}</a>
+            Telefon: <a href="tel:+436801528926">+43 680 1528926</a>
+            <br />
+            E-Mail:
+            <a href="mailto:info@psychotherapie-rusch.at">
+              info@psychotherapie-rusch.at
+            </a>
           </p>
         </section>
 
         <section>
-          <h2>Welche Daten?</h2>
+          <h2>Daten</h2>
           <ul>
             <li>
               Technische Server-Logfiles (IP-Adresse, Datum/Uhrzeit,
@@ -47,7 +53,6 @@ export default function Datenschutz() {
               psychotherapeutischer Verschwiegenheit
             </li>
           </ul>
-          <p>Es werden keine Cookies oder Tracking-Tools eingesetzt.</p>
         </section>
 
         <section>
@@ -89,9 +94,9 @@ export default function Datenschutz() {
         <section>
           <h2>Weitergabe</h2>
           <p>
-            Eine Weitergabe erfolgt nur, wenn sie gesetzlich vorgesehen ist oder
-            Sie zugestimmt haben. Für das Hosting wird ein Dienstleister in der
-            EU genutzt (Server-Logs).
+            Für Hosting, Auslieferung und eingebundene Inhalte werden
+            Dienstleister eingesetzt, an die dabei Daten übermittelt werden
+            können.
           </p>
         </section>
 
@@ -103,6 +108,10 @@ export default function Datenschutz() {
             Rahmen. Wenden Sie sich dazu an die oben genannten Kontaktdaten.
             Zusätzlich können Sie sich bei der Österreichischen
             Datenschutzbehörde beschweren.
+          </p>
+          <p>
+            Es findet keine automatisierte Entscheidungsfindung einschließlich
+            Profiling gemäß Art. 22 DSGVO statt.
           </p>
         </section>
       </div>
