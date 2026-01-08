@@ -119,15 +119,19 @@
   box-shadow: 0px 2px 15px -3px var(--color1_2);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1023px) {
   .section {
     flex-direction: column;
     flex-wrap: nowrap;
   }
 
   .mediaColumn {
-    max-width: 35rem;
-    margin-left: 0;
+    max-width: min(35rem, 100%);
+    margin-inline: auto;
+  }
+
+  .text {
+    max-width: none;
   }
 
   .gallery {
@@ -137,5 +141,4 @@
   .card {
     flex: 1 1 18rem;
   }
-
 }
