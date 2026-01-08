@@ -142,7 +142,8 @@
   margin: 0rem 0rem -2rem 0rem;
   max-height: 24rem;
   align-self: center;
-  border-top: 1px solid var(--color1_4);
+  display: none;
+  /* border-top: 1px solid var(--color1_4); */
 
   /* background: #fac38822; */
 
@@ -225,6 +226,7 @@
 .ctaButton {
   padding-top: 2rem;
   margin: 0 auto;
+  display: none;
 }
 
 @media (max-width: 1023px) {
@@ -332,7 +334,7 @@
 
   .heading {
     font-weight: 300;
-    font-size: clamp(1.6rem, 7vw, 2.8rem);
+    font-size: clamp(1.6rem, 8vw, 2.2rem);
     padding-top: 2rem;
   }
 
@@ -394,5 +396,8 @@
     font-size: 0.9rem;
     width: 80vw;
     text-align: left;
+  }
+  .ctaButton {
+    display: flex;
   }
 }

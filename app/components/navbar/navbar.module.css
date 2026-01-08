@@ -1,18 +1,20 @@
 .navbar {
   background-color: var(--color2);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  /* backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px); */
   display: flex;
   flex-direction: column;
-  height: 5rem;
+  height: var(--navbar-height);
   align-items: center;
   justify-content: center;
   color: var(--color1);
-  position: sticky;
+  position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 1001;
   overflow: visible;
+  transform: translateZ(0);
+  backface-visibility: hidden;
   box-shadow: 0px 0px 10px 0px var(--color1_3);
 }
 
@@ -51,6 +53,7 @@
 
 .mobileKontakt {
   align-self: start;
+  padding-top: 0.6rem;
 }
 
 .navItemsDiv {
@@ -81,9 +84,10 @@
   padding: 6px 10px 8px 10px;
   background-color: transparent;
   text-decoration: none;
-  color: var(--color3);
+  color: var(--color1);
   border-radius: 12px;
   transition: color 0.15s ease, opacity 0.15s ease, background-color 0.15s ease;
+  font-weight: 350;
 }
 
 .linkActive {
@@ -98,7 +102,7 @@
 }
 
 .link:hover {
-  color: var(--color1);
+  color: var(--color3);
   opacity: 1;
 }
 
@@ -134,12 +138,12 @@
   background-color: var(--color2);
   color: var(--color1);
   border: 1px solid rgba(0, 0, 255, 0);
+  font-weight: 350;
 }
 
 .link3:hover {
-  color: var(--color1);
-  background-color: var(--color1_5);
-  border-radius: 999px;
+  color: var(--color3);
+
   opacity: 1;
 }
 
@@ -192,24 +196,38 @@
 
 .mobileMenu {
   will-change: opacity, transform;
-  top: 5rem;
-  position: absolute;
+  position: fixed;
+  top: var(--navbar-height);
   left: 0;
   right: 0;
+  max-height: calc(100vh - var(--navbar-height));
   background-color: var(--color2);
   box-shadow: 0px 10px 20px -10px var(--color1_3);
   z-index: 1001;
   opacity: 0;
   overflow-y: auto;
-  transform: translateY(-5px);
+  transform: translateY(calc(-100% - var(--navbar-height)));
   pointer-events: none;
-  transition: opacity 0.2s ease-out, transform 0.2s ease-out; /* Dauer auf 0.2s reduziert */
+  transition: transform 0.3s ease-out;
+  z-index: 1000;
+  opacity: 1;
 }
 
 .mobileMenuOpen {
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
+}
+
+.mobileMenuInstant {
+  transition: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mobileMenu,
+  .mobileOverlay {
+    transition: none;
+  }
 }
 
 .navItemsMobile {
@@ -228,20 +246,27 @@
 .mobileOverlay {
   position: fixed;
   will-change: opacity;
-  top: 5rem;
+  top: var(--navbar-height);
   left: 0;
   right: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.4);
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.2s ease-out;
-  z-index: 900;
+  /* transition: opacity 0.2s ease-out; */
+  transition-delay: 0s;
+  z-index: 999;
 }
 
 .mobileOverlayOpen {
   opacity: 1;
   pointer-events: auto;
+  transition-delay: 0s;
+  transition: opacity 0.4s ease-out;
+}
+
+.mobileOverlayInstant {
+  transition: none !important;
 }
 
 @media (min-width: 1024px) {
@@ -277,13 +302,16 @@
   }
 
   .navbar {
-    height: 5rem;
+    height: var(--navbar-height);
   }
 
   .mobileMenu {
     width: 100%;
-    max-height: calc(100vh - 5rem);
+    max-height: calc(100vh - var(--navbar-height));
     overflow-y: auto;
+  }
+  .link3 {
+    padding: 0.7rem 0 0 0;
   }
 }
 

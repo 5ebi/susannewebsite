@@ -14,9 +14,10 @@ export default function Datenschutz() {
       <div className={styles.intro}>
         <h1 className={styles.heading}>Datenschutzerklärung</h1>
         <p>
-          Ich verarbeite nur die Daten, die für den Betrieb der Website, Ihre
-          Kontaktaufnahme und die Durchführung der Therapie notwendig sind. Ich
-          setze keine eigenen Cookies zu Tracking-Zwecken ein.
+          Ich verarbeite nur die Daten, die für den Betrieb der Website und Ihre
+          Kontaktaufnahme erforderlich sind. Auf dieser Website gibt es kein
+          Kontaktformular und keinen Newsletter. Ich setze keine Cookies zu
+          Tracking- oder Marketingzwecken ein.
         </p>
       </div>
 
@@ -24,13 +25,13 @@ export default function Datenschutz() {
         <section>
           <h2>Verantwortlich</h2>
           <p>
-            Mag. Susanne Rusch · Psychotherapeutin und Musiktherapeutin
+            Mag.a Susanne Rusch · Psychotherapeutin und Musiktherapeutin
             <br />
             Hannovergasse 16/3, 1200 Wien
             <br />
             Telefon: <a href="tel:+436801528926">+43 680 1528926</a>
             <br />
-            E-Mail:
+            E-Mail:{' '}
             <a href="mailto:info@psychotherapie-rusch.at">
               info@psychotherapie-rusch.at
             </a>
@@ -46,13 +47,33 @@ export default function Datenschutz() {
             </li>
             <li>
               Kontaktdaten und Inhalt Ihrer Anfrage bei Telefon- oder
-              E-Mail-Kontakt
+              E-Mail-Kontakt (Sie entscheiden, welche Angaben Sie übermitteln)
             </li>
             <li>
               Im Rahmen einer Therapie: gesundheitsbezogene Daten unter
               psychotherapeutischer Verschwiegenheit
             </li>
           </ul>
+        </section>
+
+        <section>
+          <h2>Hosting & Server-Logfiles</h2>
+          <p>
+            Diese Website wird über den Hosting-Provider Vercel bereitgestellt
+            (Serverstandort EU, z. B. Frankfurt am Main). Beim Aufruf der
+            Website werden aus technischen Gründen Server-Logfiles verarbeitet,
+            um die Website auszuliefern und die Sicherheit zu gewährleisten.
+          </p>
+        </section>
+
+        <section>
+          <h2>Kontaktaufnahme</h2>
+          <p>
+            Wenn Sie mich per E-Mail oder Telefon kontaktieren, verarbeite ich
+            Ihre Angaben zur Bearbeitung der Anfrage und zur Terminvereinbarung.
+            Bitte senden Sie per E-Mail keine sensiblen Gesundheitsdaten, wenn
+            Sie das vermeiden möchten.
+          </p>
         </section>
 
         <section>
@@ -94,9 +115,13 @@ export default function Datenschutz() {
         <section>
           <h2>Weitergabe</h2>
           <p>
-            Für Hosting, Auslieferung und eingebundene Inhalte werden
-            Dienstleister eingesetzt, an die dabei Daten übermittelt werden
-            können.
+            Für Hosting und Auslieferung wird ein Dienstleister (Vercel)
+            eingesetzt. Auf der Kontakt-Seite ist außerdem Google Maps als
+            eingebetteter Inhalt eingebunden; dabei werden insbesondere Ihre
+            IP-Adresse sowie technische Daten an Google übermittelt. Eine
+            darüberhinausgehende Weitergabe Ihrer Daten erfolgt nicht, außer
+            wenn dies zur Vertragserfüllung notwendig ist, eine gesetzliche
+            Verpflichtung besteht oder Sie eingewilligt haben.
           </p>
         </section>
 
@@ -107,7 +132,8 @@ export default function Datenschutz() {
             Einschränkung, Datenübertragbarkeit und Widerspruch im gesetzlichen
             Rahmen. Wenden Sie sich dazu an die oben genannten Kontaktdaten.
             Zusätzlich können Sie sich bei der Österreichischen
-            Datenschutzbehörde beschweren.
+            Datenschutzbehörde (DSB) beschweren: Barichgasse 40-42, 1030 Wien,
+            https://www.dsb.gv.at/
           </p>
           <p>
             Es findet keine automatisierte Entscheidungsfindung einschließlich

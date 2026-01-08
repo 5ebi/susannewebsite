@@ -23,7 +23,6 @@ export default function Willkommen() {
               alt="Magistra Susanne Rusch – Psychotherapeutin und Musiktherapeutin in Wien"
               className={styles.image}
             />
-            <p className="photoDescription"> Mag.ª Susanne Rusch</p>
           </div>
           <section className={styles.spruchContainer}>
             <h1 className={styles.heading}>Herzlich Willkommen</h1>
@@ -52,7 +51,7 @@ export default function Willkommen() {
         </div>
       </div>
       <section className={styles.spruchContainer3}>
-        <h2 className={styles.ctaHeading}>
+        {/* <h2 className={styles.ctaHeading}>
           Psychotherapie & Musiktherapie in Wien-Brigittenau
         </h2>
         <p className={styles.ctaText}>
@@ -60,7 +59,7 @@ export default function Willkommen() {
           Erwachsene im Einzelsetting. Wenn Sie Fragen haben oder einen Termin
           vereinbaren möchten, melden Sie sich gerne telefonisch oder per
           E-Mail.
-        </p>
+        </p> */}
         <div className={styles.ctaButton}>
           <KontaktButton>Termin anfragen</KontaktButton>
         </div>

@@ -1,16 +1,41 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from './page.module.css';
+
+const MAP_SRC =
+  'https://www.google.com/maps?q=Hannovergasse%2016/3,%201200%20Wien&output=embed';
 
 export default function KontaktClient() {
   const [mapLoaded, setMapLoaded] = useState(false);
+  const [isResizing, setIsResizing] = useState(false);
+
+  useEffect(() => {
+    let timeoutId: number | undefined;
+    const onResize = () => {
+      setIsResizing(true);
+      if (timeoutId) window.clearTimeout(timeoutId);
+      timeoutId = window.setTimeout(() => setIsResizing(false), 150);
+    };
+
+    window.addEventListener('resize', onResize);
+    return () => {
+      window.removeEventListener('resize', onResize);
+      if (timeoutId) window.clearTimeout(timeoutId);
+    };
+  }, []);
 
   return (
     <main className={styles.kontaktPage}>
       <h1 className={styles.heading}>Kontakt</h1>
       <div className={styles.wrapper}>
         <div className={styles.leftColumn}>
+          <p className={styles.ctaText}>
+            Kontaktieren Sie mich gerne per{' '}
+            <a href="mailto:info@psychotherapie-rusch.at">E-Mail</a> oder{' '}
+            <a href="tel:+436801528926">Telefon</a>, um ein unverbindliches
+            Erstgespräch zu vereinbaren.
+          </p>
           <div className={styles.contactDetails}>
             <div>
               <h3>Praxisadresse</h3>
@@ -61,12 +86,16 @@ export default function KontaktClient() {
         </div>
 
         <div className={styles.mapWrapper}>
+          {!mapLoaded ? (
+            <div className={styles.mapOverlay} aria-hidden="true"></div>
+          ) : null}
+
           <iframe
             className={`${styles.mapIframe} ${
               mapLoaded ? styles.mapIframeVisible : ''
-            }`}
+            } ${isResizing ? styles.mapIframeHidden : ''}`}
             title="Praxisstandort Hannovergasse"
-            src="https://www.google.com/maps?q=Hannovergasse%2016/3,%201200%20Wien&output=embed"
+            src={MAP_SRC}
             allowFullScreen
             loading="eager"
             referrerPolicy="no-referrer-when-downgrade"

@@ -79,6 +79,24 @@
   font-weight: 300;
 }
 
+.ctaText {
+  max-width: 65ch;
+  line-height: 1.7;
+  color: var(--color3);
+  font-weight: 300;
+}
+
+.ctaText a {
+  text-decoration: underline;
+  text-decoration-color: var(--color1_3);
+  text-underline-offset: 0.2em;
+}
+
+.ctaText a:hover {
+  color: var(--color1);
+  text-decoration-color: var(--color1);
+}
+
 .mapWrapper {
   position: relative;
   width: 100%;
@@ -92,6 +110,7 @@
   box-shadow: 0 18px 55px -32px var(--color3);
   background: var(--color2);
   border: 1px solid var(--color1_4);
+  contain: layout paint;
 }
 
 .mapWrapper::before {
@@ -99,15 +118,68 @@
   position: absolute;
   inset: 0;
   background: url('/images/maps-background.webp') center/cover no-repeat;
-  filter: blur(7px);
   z-index: 0;
-  opacity: 0.8;
+  opacity: 0.45;
+  filter: blur(6px);
+  transform: scale(1.15);
 }
 
 .mapWrapper iframe {
   width: 100%;
   height: 100%;
   border: 0;
+}
+
+.mapOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+  text-align: center;
+}
+
+.mapOverlayContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  background: color-mix(in srgb, var(--color2) 88%, transparent);
+  border: 1px solid var(--color1_4);
+  border-radius: 14px;
+  padding: 1rem 1.25rem;
+  max-width: 22rem;
+  box-shadow: 0 16px 38px -28px var(--color3);
+}
+
+.mapLoading {
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: var(--color3);
+}
+
+.mapLinkFloating {
+  position: absolute;
+  right: 0.75rem;
+  bottom: 0.75rem;
+  z-index: 4;
+  border-radius: 999px;
+  padding: 0.45rem 0.75rem;
+  border: 1px solid var(--color1_4);
+  background: color-mix(in srgb, var(--color2) 85%, transparent);
+  color: var(--color3);
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: background-color 0.15s ease, border-color 0.15s ease,
+    color 0.15s ease;
+}
+
+.mapLinkFloating:hover {
+  background: color-mix(in srgb, var(--color1_5) 100%, transparent);
+  border-color: var(--color1_2);
+  color: var(--color1);
 }
 
 .mapIframe {
@@ -118,10 +190,15 @@
   transition: opacity 250ms ease;
   position: relative;
   z-index: 2;
+  will-change: opacity;
 }
 
 .mapIframeVisible {
   opacity: 1;
+}
+
+.mapIframeHidden {
+  display: none;
 }
 
 .arrival {

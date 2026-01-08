@@ -2,9 +2,10 @@
   background-color: var(--color1);
   display: flex;
   justify-content: center;
-  height: 4rem;
+  height: var(--footer-height);
   align-items: center;
-  margin-top: 1.5rem;
+  width: 100%;
+  flex-shrink: 0;
   border-top: solid 1px;
   color: var(--color2);
 }

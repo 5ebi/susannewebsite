@@ -37,7 +37,9 @@ export default function UeberMich() {
             <h2>Berufserfahrung</h2>
             <ul>
               {arbeitserfahrung.map((item) => (
-                <li key={item}>{item}</li>
+                <li className={styles.listItems} key={item}>
+                  {item}
+                </li>
               ))}
             </ul>
           </section>
@@ -46,7 +48,9 @@ export default function UeberMich() {
             <h2>Ausbildung</h2>
             <ul>
               {ausbildung.map((item) => (
-                <li key={item}>{item}</li>
+                <li className={styles.listItems} key={item}>
+                  {item}
+                </li>
               ))}
             </ul>
           </section>

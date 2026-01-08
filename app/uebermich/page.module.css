@@ -29,7 +29,7 @@
   flex-direction: column;
   flex: 1 1 50rem;
   max-width: 40rem;
-  gap: 4rem;
+  gap: 2rem;
 }
 
 .columns section {
@@ -94,8 +94,12 @@
   }
 
   .portrait {
-    width: min(18rem, 80vw);
+    width: min(12rem, 80vw);
     height: auto;
     aspect-ratio: 2 / 3;
+  }
+
+  .listItems {
+    margin-bottom: 0.5rem;
   }
 }

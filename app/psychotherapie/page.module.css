@@ -5,13 +5,7 @@
   padding-top: clamp(1.25rem, 2vw, 2rem);
   display: flex;
   flex-direction: column;
-  gap: clamp(2rem, 5vw, 3.5rem);
-}
-
-.header {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
+  gap: 2rem;
 }
 
 .heading {
@@ -31,53 +25,32 @@
 }
 
 .section {
-  --caption-gap: 0.55rem;
-  --caption-font-size: clamp(0.7rem, 0rem + 3vw, 0.9rem);
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  grid-template-areas: 'text media';
-  align-items: center;
-  column-gap: clamp(1.5rem, 4vw, 3rem);
-  row-gap: 1.25rem;
-  padding-bottom: calc(var(--caption-gap) + 1.5 * var(--caption-font-size));
-}
-
-.sectionAlt {
-  grid-template-areas: 'media text';
+  display: flex;
+  align-items: flex-start;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  flex-wrap: wrap;
 }
 
 .text {
-  grid-area: text;
-  max-width: 60ch;
+  flex: 1 1 18rem;
+  max-width: 40rem;
 }
 
-.text h2 {
-  font-weight: 400;
-  font-size: 1.2rem;
-  margin: 0 0 0.75rem 0;
-  color: var(--color3);
-}
-
-.text p {
+/* .text p {
   line-height: 1.7;
   color: var(--color3);
-}
+} */
 
 .text p + p {
   margin-top: 1rem;
 }
 
 .media {
-  grid-area: media;
   margin: 0;
-  position: relative;
+  flex: 1 1 18rem;
   width: 100%;
-  max-width: 32rem;
-  justify-self: end;
-}
-
-.sectionAlt .media {
-  justify-self: start;
+  max-width: 34rem;
+  margin-left: auto;
 }
 
 .image {
@@ -88,40 +61,18 @@
   box-shadow: 0px 2px 15px -3px var(--color1_2);
 }
 
-.caption {
-  position: absolute;
-  inset-inline: 0;
-  inset-block-start: 100%;
-  margin-top: var(--caption-gap);
-  font-size: var(--caption-font-size);
-  font-weight: 300;
-  opacity: 0.9;
-  color: var(--color3_1);
-  padding-left: 0.25rem;
-}
-
 @media (max-width: 900px) {
   .page {
     gap: 2.5rem;
   }
 
-  .section,
-  .sectionAlt {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      'text'
-      'media';
-    padding-bottom: 0;
+  .section {
+    flex-direction: column;
+    flex-wrap: nowrap;
   }
 
-  .media,
-  .sectionAlt .media {
+  .media {
     max-width: 40rem;
-    justify-self: start;
-  }
-
-  .caption {
-    position: static;
-    font-size: 0.8rem;
+    margin-left: 0;
   }
 }

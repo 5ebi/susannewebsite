@@ -18,43 +18,39 @@
 }
 
 .section {
-  display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
-  grid-template-areas:
-    'textTop media'
-    'textBottom media';
-  align-items: start;
-  column-gap: clamp(1.5rem, 4vw, 3rem);
-  row-gap: 1.25rem;
+  display: flex;
+  align-items: flex-start;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  flex-wrap: wrap;
 }
 
-.textTop {
-  grid-area: textTop;
+.text {
+  flex: 1 1 18rem;
   max-width: 65ch;
 }
 
-.textBottom {
-  grid-area: textBottom;
-  max-width: 65ch;
-}
-
-.textTop p,
-.textBottom p {
+.text p {
   line-height: 1.7;
   color: var(--color3);
 }
 
-.textTop p + p,
-.textBottom p + p {
+.text p + p {
   margin-top: 1rem;
 }
 
+.mediaColumn {
+  flex: 1 1 18rem;
+  width: 100%;
+  max-width: 34rem;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
 .media {
-  grid-area: media;
   margin: 0;
   width: 100%;
-  max-width: 32rem;
-  justify-self: end;
 }
 
 .image {
@@ -65,13 +61,25 @@
   box-shadow: 0px 2px 15px -3px var(--color1_2);
 }
 
-.caption {
-  margin-top: 0.55rem;
-  font-size: clamp(0.7rem, 0rem + 3vw, 0.9rem);
-  font-weight: 300;
-  opacity: 0.9;
-  color: var(--color3_1);
-  padding-left: 0.25rem;
+.subGallery {
+  display: flex;
+  width: 100%;
+  flex-wrap: nowrap;
+  gap: 1rem;
+}
+
+.subCard {
+  flex: 1 1 0;
+  min-width: 0;
+  margin: 0;
+}
+
+.subCardImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 1rem;
+  box-shadow: 0px 2px 15px -3px var(--color1_2);
 }
 
 .gallerySection {
@@ -90,8 +98,8 @@
 }
 
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  display: flex;
+  flex-wrap: nowrap;
   gap: clamp(1rem, 3vw, 1.75rem);
   align-items: start;
 }
@@ -100,6 +108,7 @@
   display: flex;
   flex-direction: column;
   margin: 0;
+  flex: 1 1 0;
 }
 
 .cardImage {
@@ -112,19 +121,21 @@
 
 @media (max-width: 900px) {
   .section {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      'textTop'
-      'media'
-      'textBottom';
+    flex-direction: column;
+    flex-wrap: nowrap;
   }
 
-  .media {
+  .mediaColumn {
     max-width: 35rem;
-    justify-self: start;
+    margin-left: 0;
   }
 
-  .caption {
-    font-size: 0.8rem;
+  .gallery {
+    flex-wrap: wrap;
   }
+
+  .card {
+    flex: 1 1 18rem;
+  }
+
 }

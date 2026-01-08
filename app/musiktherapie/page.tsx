@@ -4,6 +4,9 @@ import styles from './page.module.css';
 import Kalimba from '@/public/images/Praxis-Sanni_Kalimba.webp';
 import Kantele from '@/public/images/Praxis-Sanni_Kantele.webp';
 import SpringTongueDrum from '@/public/images/Praxis-Sanni_Spring Tongue Drum.webp';
+// Alte Layout-Assets (derzeit nicht verwendet):
+// import Instrument4 from '@/public/images/instrument4.jpg';
+// import Gitarre from '@/public/images/gitarre.jpg';
 
 export const metadata: Metadata = {
   title: 'Musiktherapie in Wien (1200)',
@@ -17,7 +20,7 @@ export default function Musiktherapie() {
     <main className={styles.page}>
       <h1 className={styles.heading}>Musiktherapie</h1>
       <section className={styles.section}>
-        <div className={styles.textTop}>
+        <div className={styles.text}>
           <p>
             In der Musiktherapie stehen uns unterschiedliche, leicht spielbare
             Instrumente zur Verfügung. Beim gemeinsamen Improvisieren können
@@ -30,18 +33,6 @@ export default function Musiktherapie() {
             um unterschiedliche Gefühlslagen und innere Prozesse bewusst zu
             machen.
           </p>
-        </div>
-        <figure className={styles.media}>
-          <Image
-            src={Kalimba}
-            priority
-            sizes="(max-width: 900px) 100vw, 45vw"
-            alt="Kalimba im Praxisraum"
-            className={styles.image}
-          />
-          <figcaption className={styles.caption}>Kalimba</figcaption>
-        </figure>
-        <div className={styles.textBottom}>
           <p>
             Die musikalische Erfahrung im geschützten Rahmen schafft einen Raum,
             in dem eigene Gefühle und Erfahrungen gespürt, verstanden und
@@ -52,9 +43,39 @@ export default function Musiktherapie() {
             entdecken.
           </p>
         </div>
+        <div className={styles.mediaColumn}>
+          <figure className={styles.media}>
+            <Image
+              src={SpringTongueDrum}
+              priority
+              sizes="(max-width: 900px) 100vw, 45vw"
+              alt="Spring Tongue Drum im Praxisraum"
+              className={styles.image}
+            />
+          </figure>
+
+          <div className={styles.subGallery} aria-label="Instrumente">
+            <figure className={styles.subCard}>
+              <Image
+                src={Kantele}
+                sizes="(max-width: 900px) 50vw, 20vw"
+                alt="Kantele im Praxisraum"
+                className={styles.subCardImage}
+              />
+            </figure>
+            <figure className={styles.subCard}>
+              <Image
+                src={Kalimba}
+                sizes="(max-width: 900px) 50vw, 20vw"
+                alt="Kalimba im Praxisraum"
+                className={styles.subCardImage}
+              />
+            </figure>
+          </div>
+        </div>
       </section>
 
-      <section className={styles.gallerySection} aria-label="Instrumente">
+      {/* <section className={styles.gallerySection} aria-label="Instrumente">
         <h2 className={styles.galleryHeading}>Weitere Instrumente</h2>
         <div className={styles.gallery}>
           <figure className={styles.card}>
@@ -64,21 +85,33 @@ export default function Musiktherapie() {
               alt="Kantele im Praxisraum"
               className={styles.cardImage}
             />
-            <figcaption className={styles.caption}>Kantele</figcaption>
           </figure>
           <figure className={styles.card}>
             <Image
-              src={SpringTongueDrum}
+              src={Kalimba}
               sizes="(max-width: 900px) 50vw, 30vw"
-              alt="Spring Tongue Drum im Praxisraum"
+              alt="Kalimba im Praxisraum"
               className={styles.cardImage}
             />
-            <figcaption className={styles.caption}>
-              Spring Tongue Drum
-            </figcaption>
+          </figure>
+          <figure className={styles.card}>
+            <Image
+              src={Gitarre}
+              sizes="(max-width: 900px) 50vw, 30vw"
+              alt="Gitarre im Praxisraum"
+              className={styles.cardImage}
+            />
+          </figure>
+          <figure className={styles.card}>
+            <Image
+              src={Instrument4}
+              sizes="(max-width: 900px) 50vw, 30vw"
+              alt="Instrument im Praxisraum"
+              className={styles.cardImage}
+            />
           </figure>
         </div>
-      </section>
+      </section> */}
     </main>
   );
 }

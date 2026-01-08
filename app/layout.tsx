@@ -5,6 +5,7 @@ import Footer from './components/footer/Footer';
 import Navbar from './components/navbar/Navbar';
 import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { ReactNode } from 'react';
 
 const normalizeSiteUrl = (value: string) => {
   const trimmed = value.trim().replace(/\/$/, '');
@@ -12,12 +13,11 @@ const normalizeSiteUrl = (value: string) => {
   return `https://${trimmed}`;
 };
 
-const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL
-    ? normalizeSiteUrl(process.env.NEXT_PUBLIC_SITE_URL)
-    : process.env.VERCEL_URL
-      ? `https://${process.env.VERCEL_URL}`
-      : 'https://psychotherapie-rusch.at';
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL
+  ? normalizeSiteUrl(process.env.NEXT_PUBLIC_SITE_URL)
+  : process.env.VERCEL_URL
+  ? `https://${process.env.VERCEL_URL}`
+  : 'https://psychotherapie-rusch.at';
 
 const notoSansJP = Noto_Sans_JP({
   variable: '--font-noto-sans-jp',
@@ -37,13 +37,19 @@ const lora = Lora({
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'Praxis für Psychotherapie und Musiktherapie in Wien | Susanne Rusch',
+    default:
+      'Praxis für Psychotherapie und Musiktherapie in Wien | Susanne Rusch',
     template: '%s | Susanne Rusch',
   },
   description:
     'Psychotherapie (Integrative Gestalttherapie) und Musiktherapie in Wien-Brigittenau (1200) – Mag.ᵃ Susanne Rusch. Termine nach Vereinbarung.',
+  icons: {
+    icon: [{ url: '/icon.png' }],
+    apple: [{ url: '/apple-icon.png' }],
+  },
   openGraph: {
-    title: 'Praxis für Psychotherapie und Musiktherapie in Wien | Susanne Rusch',
+    title:
+      'Praxis für Psychotherapie und Musiktherapie in Wien | Susanne Rusch',
     description:
       'Psychotherapie (Integrative Gestalttherapie) und Musiktherapie in Wien-Brigittenau (1200) – Mag.ᵃ Susanne Rusch. Termine nach Vereinbarung.',
     url: '/',
@@ -56,23 +62,16 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: ReactNode;
 }>) {
   return (
     <html lang="de">
-      <head>
-        {/* Google Maps Performance Optimierung */}
-        <link rel="dns-prefetch" href="https://maps.googleapis.com" />
-        <link rel="dns-prefetch" href="https://maps.gstatic.com" />
-        <link rel="preconnect" href="https://maps.googleapis.com" />
-        <link rel="preconnect" href="https://maps.gstatic.com" crossOrigin="" />
-      </head>
       <body
         className={`${notoSansJP.variable} ${bioRhyme.variable} ${lora.variable}`}
         style={{
           display: 'flex',
           flexDirection: 'column',
-          minHeight: '100vh',
+          minHeight: '100dvh',
         }}
       >
         <Navbar />
