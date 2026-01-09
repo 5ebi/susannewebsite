@@ -15,34 +15,37 @@ export default function Impressum() {
         <h1 className={styles.heading}>Impressum</h1>
       </div>
       <div className={styles.sections}>
-	        <section>
-	          <h2>Medieninhaberin & Unternehmerin</h2>
-	          <p>
-	            Mag.a Susanne Rusch · Psychotherapeutin und Musiktherapeutin
-	            (Verleihungsstaat: Österreich)
-	            <br />
-	            Hannovergasse 16/3, 1200 Wien
-	          </p>
-	          <p>
-	            Telefon: <a href="tel:+436801528926">+43 680 1528926</a>
-	            <br />
-	            E-Mail:{' '}
-	            <a href="mailto:info@psychotherapie-rusch.at">
-	              info@psychotherapie-rusch.at
-	            </a>
-	          </p>
-	        </section>
-	        <section>
-	          <h2>Bildnachweise & Webdesign</h2>
-	          <p>Fotos und Logo: Mirella Rusch</p>
-	          <p>Webdesign und Programmierung: Sebastian Speiser</p>
-	        </section>
-	        <section>
-	          <h2>Unternehmensgegenstand</h2>
-	          <p>Psychotherapie und Musiktherapie.</p>
-	          <p>
-	            Blattlinie: Diese Website dient ausschließlich der Information über
-            die psychotherapeutische und musiktherapeutische Tätigkeit.
+        <section>
+          <h2>Mag.ª Susanne Rusch</h2>
+          <p>
+            Psychotherapeutin und Musiktherapeutin (Verleihungsstaat:
+            Österreich)
+            <br />
+            Hannovergasse 16/3, 1200 Wien
+          </p>
+        </section>
+        <section>
+          <h2>Kontakt</h2>
+          <p>
+            Telefon: <a href="tel:+436801528926">+43 680 1528926</a>
+            <br />
+            E-Mail:{' '}
+            <a href="mailto:info@psychotherapie-rusch.at">
+              info@psychotherapie-rusch.at
+            </a>
+          </p>
+        </section>
+        <section>
+          <h2>Bildnachweise & Webdesign</h2>
+          <p>Fotos und Logo: Mirella Rusch und Privat</p>
+          <p>Webdesign und Programmierung: Sebastian Speiser</p>
+        </section>
+        <section>
+          <h2>Unternehmensgegenstand</h2>
+          <p>Psychotherapie und Musiktherapie.</p>
+          <p>
+            Diese Website dient ausschließlich der Information über die
+            psychotherapeutische und musiktherapeutische Tätigkeit.
           </p>
         </section>
         <section>
@@ -56,14 +59,6 @@ export default function Impressum() {
             Konsumentenschutz.
           </p>
         </section>
-	        <section>
-	          <h2>Haftungshinweis</h2>
-	          <p>Für Inhalte externer Links wird keine Haftung übernommen.</p>
-	        </section>
-	        <section>
-	          <h2>Urheberrecht</h2>
-	          <p>Die Inhalte dieser Website sind urheberrechtlich geschützt.</p>
-	        </section>
       </div>
     </main>
   );

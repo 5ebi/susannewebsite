@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
-  title: 'Datenschutzerklärung',
+  title: 'Datenschutz',
   description:
-    'Datenschutzerklärung zur Website der Praxis von Magistra Susanne Rusch für Psychotherapie und Musiktherapie in Wien (1200): Server-Logfiles, Kontaktaufnahme und Rechte nach DSGVO.',
+    'Datenschutz zur Website der Praxis von Mag.a Susanne Rusch in Wien (1200): keine Tracking-Cookies, Server-Log-Files und Rechte nach DSGVO.',
   alternates: { canonical: '/datenschutz' },
 };
 
@@ -12,132 +12,164 @@ export default function Datenschutz() {
   return (
     <main className={styles.wrapper}>
       <div className={styles.intro}>
-        <h1 className={styles.heading}>Datenschutzerklärung</h1>
+        <h1 className={styles.heading}>Datenschutz</h1>
         <p>
-          Ich verarbeite nur die Daten, die für den Betrieb der Website und Ihre
-          Kontaktaufnahme erforderlich sind. Auf dieser Website gibt es kein
-          Kontaktformular und keinen Newsletter. Ich setze keine Cookies zu
-          Tracking- oder Marketingzwecken ein.
+          Auf dieser Website gibt es kein Kontaktformular und keinen Newsletter.
+          Es werden keine Cookies zu Tracking- oder Marketingzwecken eingesetzt.
         </p>
       </div>
 
       <div className={styles.sections}>
         <section>
-          <h2>Verantwortlich</h2>
+          <h2>Verantwortliche und Kontaktdaten</h2>
           <p>
-            Mag.a Susanne Rusch · Psychotherapeutin und Musiktherapeutin
+            Verantwortliche für die Datenverarbeitung gemäß
+            Datenschutzgrundverordnung (DSGVO) ist:
+          </p>
+          <p>
+            Mag.ᵃ Susanne Rusch
             <br />
             Hannovergasse 16/3, 1200 Wien
+          </p>
+          <p>
+            Der Schutz Ihrer Daten ist mir besonders wichtig. Ich bin für Sie
+            unter den unten angeführten Kontaktdaten jederzeit für Ihre Fragen
+            oder Ihren Widerruf erreichbar.
+          </p>
+          <p>
+            E-Mail: info@psychotherapie-rusch.at
             <br />
-            Telefon: <a href="tel:+436801528926">+43 680 1528926</a>
-            <br />
-            E-Mail:{' '}
-            <a href="mailto:info@psychotherapie-rusch.at">
-              info@psychotherapie-rusch.at
-            </a>
+            Telefon: +43 680 1528926
           </p>
         </section>
 
         <section>
-          <h2>Daten</h2>
-          <ul>
-            <li>
-              Technische Server-Logfiles (IP-Adresse, Datum/Uhrzeit,
-              angeforderte Seite)
-            </li>
-            <li>
-              Kontaktdaten und Inhalt Ihrer Anfrage bei Telefon- oder
-              E-Mail-Kontakt (Sie entscheiden, welche Angaben Sie übermitteln)
-            </li>
-            <li>
-              Im Rahmen einer Therapie: gesundheitsbezogene Daten unter
-              psychotherapeutischer Verschwiegenheit
-            </li>
-          </ul>
-        </section>
-
-        <section>
-          <h2>Hosting & Server-Logfiles</h2>
+          <h2>Personenbezogene Daten und deren Verwendung</h2>
           <p>
-            Diese Website wird über den Hosting-Provider Vercel bereitgestellt
-            (Serverstandort EU, z. B. Frankfurt am Main). Beim Aufruf der
-            Website werden aus technischen Gründen Server-Logfiles verarbeitet,
-            um die Website auszuliefern und die Sicherheit zu gewährleisten.
+            Sofern Sie mir personenbezogene Daten zur Verfügung gestellt haben,
+            nutze ich diese nur zu den mit Ihnen vereinbarten Zwecken oder wenn
+            eine sonstige rechtliche Grundlage im Einklang mit der DSGVO
+            vorliegt; dies unter Einhaltung der datenschutz- und
+            zivilrechtlichen Bestimmungen.
+          </p>
+          <p>
+            Es werden nur solche personenbezogenen Daten erhoben, die für die
+            Durchführung und Abwicklung meiner Leistungen erforderlich sind oder
+            die Sie mir freiwillig zur Verfügung gestellt haben.
+          </p>
+          <p>
+            Ich werde die mir zur Verfügung gestellten Daten nicht für andere
+            Zwecke als die durch Vertrag oder durch Ihre Einwilligung oder sonst
+            durch eine Bestimmung im Einklang mit der DSGVO gedeckten Zwecken
+            verarbeiten.
           </p>
         </section>
 
         <section>
-          <h2>Kontaktaufnahme</h2>
+          <h2>Auskunft und Löschung</h2>
           <p>
-            Wenn Sie mich per E-Mail oder Telefon kontaktieren, verarbeite ich
-            Ihre Angaben zur Bearbeitung der Anfrage und zur Terminvereinbarung.
-            Bitte senden Sie per E-Mail keine sensiblen Gesundheitsdaten, wenn
-            Sie das vermeiden möchten.
+            Als Betroffene haben Sie jederzeit das Recht auf Auskunft über Ihre
+            gespeicherten personenbezogenen Daten, deren Herkunft und Empfänger
+            und den Zweck der Datenverarbeitung sowie ein Recht auf
+            Berichtigung, Datenübertragung, Widerspruch, Einschränkung der
+            Bearbeitung sowie Sperrung oder Löschung unrichtiger bzw. unzulässig
+            verarbeiteter Daten.
+          </p>
+          <p>
+            Insoweit sich Änderungen Ihrer persönlichen Daten ergeben, ersuche
+            ich um entsprechende Mitteilung.
+          </p>
+          <p>
+            Sie haben jederzeit das Recht, eine erteilte Einwilligung zur
+            Nutzung Ihrer personenbezogenen Daten zu widerrufen. Ihre Eingabe
+            auf Auskunft, Löschung, Berichtigung, Widerspruch und/oder
+            Datenübertragung, im letztgenannten Fall, sofern damit nicht ein
+            unverhältnismäßiger Aufwand verursacht wird, kann an meine Adresse
+            gerichtet werden.
+          </p>
+          <p>
+            Wenn Sie der Auffassung sind, dass die Verarbeitung Ihrer
+            personenbezogenen Daten durch mich gegen das geltende
+            Datenschutzrecht verstößt oder Ihre datenschutzrechtlichen Ansprüche
+            in einer anderen Weise verletzt worden sind, besteht die
+            Möglichkeit, sich bei der zuständigen Aufsichtsbehörde zu
+            beschweren. In Österreich zuständig ist hierfür die
+            Datenschutzbehörde.
           </p>
         </section>
 
         <section>
-          <h2>Zweck & Rechtsgrundlagen</h2>
-          <ul>
-            <li>
-              Bereitstellung und Sicherheit der Website (Art. 6 Abs. 1 lit. f
-              DSGVO)
-            </li>
-            <li>
-              Beantwortung von Anfragen und Terminvereinbarung (Art. 6 Abs. 1
-              lit. b DSGVO)
-            </li>
-            <li>
-              Durchführung der Therapie (Art. 9 Abs. 2 lit. h DSGVO,
-              psychotherapeutische Verschwiegenheit)
-            </li>
-          </ul>
-        </section>
-
-        <section>
-          <h2>Speicherdauer</h2>
-          <ul>
-            <li>
-              Server-Logfiles: werden vom Hosting-Provider nach kurzer Frist
-              gelöscht.
-            </li>
-            <li>
-              Kontaktanfragen: nur solange nötig, um Ihre Anfrage zu
-              beantworten.
-            </li>
-            <li>
-              Behandlungsunterlagen: gemäß gesetzlichen Aufbewahrungspflichten
-              (mindestens 10 Jahre).
-            </li>
-          </ul>
-        </section>
-
-        <section>
-          <h2>Weitergabe</h2>
+          <h2>Datensicherheit</h2>
           <p>
-            Für Hosting und Auslieferung wird ein Dienstleister (Vercel)
-            eingesetzt. Auf der Kontakt-Seite ist außerdem Google Maps als
-            eingebetteter Inhalt eingebunden; dabei werden insbesondere Ihre
-            IP-Adresse sowie technische Daten an Google übermittelt. Eine
-            darüberhinausgehende Weitergabe Ihrer Daten erfolgt nicht, außer
-            wenn dies zur Vertragserfüllung notwendig ist, eine gesetzliche
-            Verpflichtung besteht oder Sie eingewilligt haben.
+            Der Schutz Ihrer personenbezogenen Daten erfolgt durch entsprechende
+            organisatorische und technische Vorkehrungen. Diese Vorkehrungen
+            betreffen insbesondere den Schutz vor unerlaubtem, rechtswidrigem
+            oder auch zufälligem Zugriff, Verarbeitung, Verlust, Verwendung und
+            Manipulation.
+          </p>
+          <p>
+            Ungeachtet der Bemühungen der Einhaltung eines stets angemessen
+            hohen Standes der Sorgfaltsanforderungen kann nicht ausgeschlossen
+            werden, dass Informationen, die Sie mir über das Internet bekannt
+            geben, von anderen Personen eingesehen und genutzt werden.
+          </p>
+          <p>
+            Bitte beachten Sie, dass ich daher keine wie immer geartete Haftung
+            für die Offenlegung von Informationen aufgrund nicht von mir
+            verursachter Fehler bei der Datenübertragung und/oder
+            unautorisiertem Zugriff durch Dritte übernehme (zB Hackangriff auf
+            E-Mail-Account bzw. Telefon).
           </p>
         </section>
 
         <section>
-          <h2>Ihre Rechte</h2>
+          <h2>Server-Log-Files</h2>
           <p>
-            Sie haben Rechte auf Auskunft, Berichtigung, Löschung,
-            Einschränkung, Datenübertragbarkeit und Widerspruch im gesetzlichen
-            Rahmen. Wenden Sie sich dazu an die oben genannten Kontaktdaten.
-            Zusätzlich können Sie sich bei der Österreichischen
-            Datenschutzbehörde (DSB) beschweren: Barichgasse 40-42, 1030 Wien,
-            https://www.dsb.gv.at/
+            Zur Optimierung der Website in Bezug auf die Systemperformance,
+            Benutzerfreundlichkeit und Bereitstellung von nützlichen
+            Informationen erhebt und speichert der Provider der Website
+            automatisch Informationen in sogenannten Server-Log-Files, die Ihr
+            Browser automatisch an uns übermittelt. Davon umfasst sind Ihre
+            IP-Adresse, Browser- und Spracheinstellung, Betriebssystem,
+            Referrer-URL, Internet-Service-Provider und Datum sowie Uhrzeit.
+            Eine Zusammenführung dieser Daten mit personenbezogenen Datenquellen
+            wird von mir nicht vorgenommen. Ich behalte mir vor, die Daten
+            nachträglich zu prüfen, wenn konkrete Anhaltspunkte für eine
+            rechtswidrige Nutzung bekannt werden.
+          </p>
+        </section>
+
+        <section>
+          <h2>Übermittlung von Daten an Dritte</h2>
+          <p>
+            Eine Weiterleitung Ihrer Daten erfolgt ausschließlich auf Grundlage
+            der DSGVO, insbesondere zur Erfüllung Ihres Auftrags oder aufgrund
+            Ihrer vorherigen Einwilligung.
           </p>
           <p>
-            Es findet keine automatisierte Entscheidungsfindung einschließlich
-            Profiling gemäß Art. 22 DSGVO statt.
+            Grundsätzlich gebe ich keine Daten an Dritte weiter, außer es
+            ergeben sich Verpflichtungen und Notwendigkeiten, die sich aus
+            unserer Geschäftsbeziehung ergeben können (z.B.: Rechnungslegung,
+            Buchhaltung).
+          </p>
+        </section>
+
+        <section>
+          <h2>Bekanntgabe von Datenpannen</h2>
+          <p>
+            Ich bin bemüht sicherzustellen, dass Datenpannen frühzeitig erkannt
+            und gegebenenfalls unverzüglich Ihnen bzw. der zuständigen
+            Aufsichtsbehörde unter Einbezug der jeweiligen Datenkategorien, die
+            betroffen sind, gemeldet werden.
+          </p>
+        </section>
+
+        <section>
+          <h2>Aufbewahrung der Daten</h2>
+          <p>
+            Ich bewahre Daten nicht länger auf als dies zur Erfüllung unserer
+            vertraglichen bzw. gesetzlichen Verpflichtungen und zur Abwehr
+            allfälliger Haftungsansprüche erforderlich ist.
           </p>
         </section>
       </div>
