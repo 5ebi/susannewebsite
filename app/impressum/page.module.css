@@ -34,3 +34,12 @@
   margin-bottom: 0.8rem;
   color: var(--color3);
 }
+
+@media (hover: hover) and (pointer: fine) {
+  .phoneLink {
+    pointer-events: none;
+    cursor: default;
+    text-decoration: none;
+    color: inherit;
+  }
+}

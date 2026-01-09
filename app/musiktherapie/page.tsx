@@ -1,16 +1,16 @@
-import type { Metadata } from 'next';
 import Image from 'next/image';
 import styles from './page.module.css';
 import Kalimba from '@/public/images/Praxis-Sanni_Kalimba.webp';
 import Kantele from '@/public/images/Praxis-Sanni_Kantele.webp';
 import SpringTongueDrum from '@/public/images/Praxis-Sanni_Spring Tongue Drum.webp';
+import { createPageMetadata } from '../lib/seo';
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: 'Musiktherapie in Wien (1200)',
   description:
     'Musiktherapie in Wien-Brigittenau (1200): Improvisation auf leicht spielbaren Instrumenten – ohne musikalische Vorerfahrung. Termine nach Vereinbarung.',
-  alternates: { canonical: '/musiktherapie' },
-};
+  canonical: '/musiktherapie',
+});
 
 export default function Musiktherapie() {
   return (

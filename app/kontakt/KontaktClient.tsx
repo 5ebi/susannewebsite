@@ -31,22 +31,24 @@ export default function KontaktClient() {
       <div className={styles.wrapper}>
         <div className={styles.leftColumn}>
           <p className={styles.ctaText}>
-            Kontaktieren Sie mich gerne per{' '}
-            <a href="mailto:info@psychotherapie-rusch.at">E-Mail</a> oder{' '}
-            <a href="tel:+436801528926">Telefon</a>, um ein unverbindliches
-            Erstgespräch zu vereinbaren.
+            Kontaktieren Sie mich gerne per E-Mail oder Telefon, um ein
+            unverbindliches Erstgespräch zu vereinbaren.
           </p>
           <div className={styles.contactDetails}>
             <div>
-              <h3>Praxisadresse</h3>
-              <p>Hannovergasse 16/3, 1200 Wien</p>
+              <h2>Praxisadresse</h2>
+              <p style={{ borderBottom: 'none', textDecoration: 'none' }}>
+                Hannovergasse 16/3, 1200 Wien
+              </p>
             </div>
             <div>
-              <h3>Telefon</h3>
-              <a href="tel:+436801528926">+43 680 1528926</a>
+              <h2>Telefon</h2>
+              <a className={styles.phoneLink} href="tel:+436801528926">
+                +43 680 1528926
+              </a>
             </div>
             <div>
-              <h3>E-Mail</h3>
+              <h2>E-Mail</h2>
               <a href="mailto:info@psychotherapie-rusch.at">
                 info@psychotherapie-rusch.at
               </a>

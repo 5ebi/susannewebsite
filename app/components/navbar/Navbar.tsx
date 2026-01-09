@@ -13,6 +13,14 @@ export default function Navbar() {
   const [instantClose, setInstantClose] = useState(false);
   const pathname = usePathname();
 
+  const navItems = [
+    { href: '/', label: 'Willkommen' },
+    { href: '/psychotherapie', label: 'Psychotherapie' },
+    { href: '/musiktherapie', label: 'Musiktherapie' },
+    { href: '/uebermich', label: 'Über mich' },
+    { href: '/rahmenbedingungen', label: 'Rahmenbedingungen' },
+  ] as const;
+
   const isActive = (href: string) =>
     href === '/' ? pathname === '/' : pathname.startsWith(href);
 
@@ -79,51 +87,23 @@ export default function Navbar() {
           </div>
           <div className={styles.navItemsDiv}>
             <ul className={styles.navItems}>
-              <li>
-                <Link className={styles.link} href={'/'}>
-                  Willkommen
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className={`${styles.link} ${
-                    isActive('/psychotherapie') ? styles.linkActive : ''
-                  }`}
-                  href={'/psychotherapie'}
-                >
-                  Psychotherapie
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className={`${styles.link} ${
-                    isActive('/musiktherapie') ? styles.linkActive : ''
-                  }`}
-                  href={'/musiktherapie'}
-                >
-                  Musiktherapie
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className={`${styles.link} ${
-                    isActive('/uebermich') ? styles.linkActive : ''
-                  }`}
-                  href={'/uebermich'}
-                >
-                  Über mich
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className={`${styles.link} ${
-                    isActive('/rahmenbedingungen') ? styles.linkActive : ''
-                  }`}
-                  href={'/rahmenbedingungen'}
-                >
-                  Rahmenbedingungen
-                </Link>
-              </li>
+              {navItems.map((item) => {
+                const active = isActive(item.href);
+                const showActiveStyle = active && item.href !== '/';
+                return (
+                  <li key={item.href}>
+                    <Link
+                      className={`${styles.link} ${
+                        showActiveStyle ? styles.linkActive : ''
+                      }`}
+                      href={item.href}
+                      aria-current={active ? 'page' : undefined}
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
           </div>
           <div className={styles.navButton}>
@@ -135,7 +115,7 @@ export default function Navbar() {
               open ? styles.burgerButtonOpen : ''
             }`}
             aria-expanded={open}
-            aria-label="Navigation öffnen"
+            aria-label={open ? 'Navigation schließen' : 'Navigation öffnen'}
             aria-controls="mobile-navigation"
             onClick={toggleMenu}
           >
@@ -155,51 +135,24 @@ export default function Navbar() {
         aria-hidden={!open}
       >
         <ul className={styles.navItemsMobile}>
-          <li>
-            <Link
-              className={styles.link3}
-              href={'/'}
-              onClick={() => closeMenu(true)}
-            >
-              Willkommen
-            </Link>
-          </li>
-          <li>
-            <Link
-              className={styles.link3}
-              href={'/psychotherapie'}
-              onClick={() => closeMenu(true)}
-            >
-              Psychotherapie
-            </Link>
-          </li>
-          <li>
-            <Link
-              className={styles.link3}
-              href={'/musiktherapie'}
-              onClick={() => closeMenu(true)}
-            >
-              Musiktherapie
-            </Link>
-          </li>
-          <li>
-            <Link
-              className={styles.link3}
-              href={'/uebermich'}
-              onClick={() => closeMenu(true)}
-            >
-              Über mich
-            </Link>
-          </li>
-          <li>
-            <Link
-              className={styles.link3}
-              href={'/rahmenbedingungen'}
-              onClick={() => closeMenu(true)}
-            >
-              Rahmenbedingungen
-            </Link>
-          </li>
+          {navItems.map((item) => {
+            const active = isActive(item.href);
+            const showActiveStyle = active && item.href !== '/';
+            return (
+              <li key={item.href}>
+                <Link
+                  className={`${styles.link3} ${
+                    showActiveStyle ? styles.linkActive : ''
+                  }`}
+                  href={item.href}
+                  aria-current={active ? 'page' : undefined}
+                  onClick={() => closeMenu(true)}
+                >
+                  {item.label}
+                </Link>
+              </li>
+            );
+          })}
           <li className={styles.mobileKontakt}>
             <KontaktButton onClick={() => closeMenu(true)}>Kontakt</KontaktButton>
           </li>

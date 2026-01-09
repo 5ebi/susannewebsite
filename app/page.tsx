@@ -1,15 +1,15 @@
-import type { Metadata } from 'next';
 import styles from './page.module.css';
 import Image from 'next/image';
 import susanne from '@/public/images/susanne-rusch-psychotherapie.webp';
 import KontaktButton from './components/KontaktButton';
+import { createPageMetadata } from './lib/seo';
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: 'Psychotherapie & Musiktherapie in Wien (1200)',
   description:
     'Praxis für Psychotherapie (Integrative Gestalttherapie) und Musiktherapie in Wien-Brigittenau (1200). Termine nach Vereinbarung – Kontakt online oder telefonisch.',
-  alternates: { canonical: '/' },
-};
+  canonical: '/',
+});
 
 export default function Willkommen() {
   return (
@@ -43,7 +43,8 @@ export default function Willkommen() {
             <div>
               <p className={styles.spruch2}>
                 „Du nimmst das, was da ist, und du nimmst es so, wie es ist,
-                <br></br>was immer auch daraus werden mag.“
+                <br />
+                was immer auch daraus werden mag.“
               </p>
               <p className={styles.spruch2_1}>- Lore Perls</p>
             </div>

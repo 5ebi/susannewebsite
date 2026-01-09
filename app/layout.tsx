@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Noto_Sans_JP, BioRhyme, Lora } from 'next/font/google';
+import { Noto_Sans_JP, Lora } from 'next/font/google';
 import './globals.css';
 import Footer from './components/footer/Footer';
 import Navbar from './components/navbar/Navbar';
@@ -9,6 +9,9 @@ import { ReactNode } from 'react';
 import { getSiteUrl } from './lib/site-url';
 
 const siteUrl = getSiteUrl();
+const isProduction = process.env.VERCEL_ENV
+  ? process.env.VERCEL_ENV === 'production'
+  : process.env.NODE_ENV === 'production';
 
 const sameAs = [
   'https://www.psyonline.at/psychotherapeutin/159786',
@@ -43,7 +46,7 @@ const structuredData = {
       '@type': 'Person',
       '@id': `${siteUrl}/#person`,
       name: 'Susanne Rusch',
-      honorificPrefix: 'Mag.a',
+      honorificPrefix: 'Mag.ᵃ',
       jobTitle: 'Psychotherapeutin und Musiktherapeutin',
       telephone: '+43 680 1528926',
       email: 'info@psychotherapie-rusch.at',
@@ -56,11 +59,6 @@ const structuredData = {
 
 const notoSansJP = Noto_Sans_JP({
   variable: '--font-noto-sans-jp',
-  subsets: ['latin'],
-});
-
-const bioRhyme = BioRhyme({
-  variable: '--font-biorhyme',
   subsets: ['latin'],
 });
 
@@ -92,6 +90,17 @@ export const metadata: Metadata = {
     locale: 'de_AT',
     type: 'website',
   },
+  robots: {
+    index: isProduction,
+    follow: isProduction,
+    googleBot: {
+      index: isProduction,
+      follow: isProduction,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
+    },
+  },
 };
 
 export default function RootLayout({
@@ -102,7 +111,7 @@ export default function RootLayout({
   return (
     <html lang="de">
       <body
-        className={`${notoSansJP.variable} ${bioRhyme.variable} ${lora.variable}`}
+        className={`${notoSansJP.variable} ${lora.variable}`}
         style={{
           display: 'flex',
           flexDirection: 'column',

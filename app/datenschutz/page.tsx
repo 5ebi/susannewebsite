@@ -1,12 +1,12 @@
-import type { Metadata } from 'next';
 import styles from './page.module.css';
+import { createPageMetadata } from '../lib/seo';
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: 'Datenschutz',
   description:
-    'Datenschutz zur Website der Praxis von Mag.a Susanne Rusch in Wien (1200): keine Tracking-Cookies, Server-Log-Files und Rechte nach DSGVO.',
-  alternates: { canonical: '/datenschutz' },
-};
+    'Datenschutz zur Website der Praxis von Mag.ᵃ Susanne Rusch in Wien (1200): keine Tracking-Cookies, Server-Log-Files und Rechte nach DSGVO.',
+  canonical: '/datenschutz',
+});
 
 export default function Datenschutz() {
   return (

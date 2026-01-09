@@ -1,14 +1,14 @@
-import type { Metadata } from 'next';
 import Image from 'next/image';
 import styles from './page.module.css';
 import Sitzgruppe1c from '@/public/images/Sitzgruppe1c.webp';
+import { createPageMetadata } from '../lib/seo';
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: 'Psychotherapie – Integrative Gestalttherapie in Wien (1200)',
   description:
     'Psychotherapie (Integrative Gestalttherapie) in Wien-Brigittenau (1200): Informationen zum Ansatz, therapeutischem Gespräch und kreativen Methoden. Termine nach Vereinbarung.',
-  alternates: { canonical: '/psychotherapie' },
-};
+  canonical: '/psychotherapie',
+});
 
 export default function Psychotherapie() {
   return (

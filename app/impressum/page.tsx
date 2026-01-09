@@ -1,12 +1,12 @@
-import type { Metadata } from 'next';
 import styles from './page.module.css';
+import { createPageMetadata } from '../lib/seo';
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: 'Impressum',
   description:
     'Impressum der Praxis für Psychotherapie und Musiktherapie von Mag.ᵃ Susanne Rusch in Wien (1200).',
-  alternates: { canonical: '/impressum' },
-};
+  canonical: '/impressum',
+});
 
 export default function Impressum() {
   return (
@@ -16,7 +16,7 @@ export default function Impressum() {
       </div>
       <div className={styles.sections}>
         <section>
-          <h2>Mag.ª Susanne Rusch</h2>
+          <h2>Mag.ᵃ Susanne Rusch</h2>
           <p>
             Psychotherapeutin und Musiktherapeutin (Verleihungsstaat:
             Österreich)
@@ -27,7 +27,10 @@ export default function Impressum() {
         <section>
           <h2>Kontakt</h2>
           <p>
-            Telefon: <a href="tel:+436801528926">+43 680 1528926</a>
+            Telefon:{' '}
+            <a className={styles.phoneLink} href="tel:+436801528926">
+              +43 680 1528926
+            </a>
             <br />
             E-Mail:{' '}
             <a href="mailto:info@psychotherapie-rusch.at">

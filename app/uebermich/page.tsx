@@ -1,14 +1,14 @@
-import type { Metadata } from 'next';
 import Image from 'next/image';
 import styles from './page.module.css';
 import portraitImage from '@/public/images/susanne-rusch-face.jpg';
+import { createPageMetadata } from '../lib/seo';
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: 'Über mich',
   description:
     'Mag.ᵃ Susanne Rusch – Psychotherapeutin (Integrative Gestalttherapie) und Musiktherapeutin in Wien (1200). Ausbildung und Berufserfahrung.',
-  alternates: { canonical: '/uebermich' },
-};
+  canonical: '/uebermich',
+});
 
 const arbeitserfahrung = [
   'Psychotherapeutin und Musiktherapeutin in freier Praxis mit Kindern, Jugendlichen und Erwachsenen',
@@ -59,7 +59,7 @@ export default function UeberMich() {
         <div className={styles.portraitWrapper}>
           <Image
             src={portraitImage}
-            alt="Portrait von Mag. Susanne Rusch"
+            alt="Portrait von Magistra Susanne Rusch"
             className={styles.portrait}
             sizes="(max-width: 900px) 12rem, 14rem"
             priority

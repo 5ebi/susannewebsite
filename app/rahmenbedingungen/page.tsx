@@ -1,12 +1,12 @@
-import type { Metadata } from 'next';
 import styles from './page.module.css';
+import { createPageMetadata } from '../lib/seo';
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: 'Rahmenbedingungen, Kosten & Erstgespräch',
   description:
     'Informationen zu Erstgespräch, Dauer, Kosten, möglichem Kostenzuschuss, Absageregelung und Verschwiegenheit. Praxis in Wien (1200).',
-  alternates: { canonical: '/rahmenbedingungen' },
-};
+  canonical: '/rahmenbedingungen',
+});
 
 export default function Rahmenbedingungen() {
   return (
