@@ -61,6 +61,7 @@ export default function UeberMich() {
             src={portraitImage}
             alt="Portrait von Mag. Susanne Rusch"
             className={styles.portrait}
+            sizes="(max-width: 900px) 12rem, 14rem"
             priority
           />
         </div>

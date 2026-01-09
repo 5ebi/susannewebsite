@@ -72,6 +72,7 @@ export default function Navbar() {
             <Image
               src={logo2}
               className={styles.logo}
+              sizes="45px"
               priority
               alt="Logo von Magistra Susanne Rusch"
             />

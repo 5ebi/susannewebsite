@@ -97,7 +97,7 @@ export default function KontaktClient() {
             title="Praxisstandort Hannovergasse"
             src={MAP_SRC}
             allowFullScreen
-            loading="eager"
+            loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
             onLoad={() => setMapLoaded(true)}
           />

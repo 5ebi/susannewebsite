@@ -1,5 +1,5 @@
 :root {
-  /*Hauptfarben*/
+
   --color1: #2c6981;
   --color1_1: #2c6981d5;
   --color1_2: #2c698161;
@@ -16,7 +16,7 @@
   --color6: #fac388;
   --color6_1: #fac38869;
 
-  /*Faboptionen*/
+
   --suslcolor: #2c6981;
   --sanftesRosa: #e7c0be;
   --warmesApricot: #e8a87c;
@@ -26,7 +26,7 @@
   --eierschale2: #fffcf1;
   --hellerSand: #f2b880;
 
-  /*Widths*/
+
   --page-max-width: 1000px;
   --navbar-height: 5rem;
   --footer-height: 4rem;

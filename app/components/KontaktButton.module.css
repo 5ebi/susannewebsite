@@ -3,7 +3,7 @@
   align-items: center;
   opacity: 1;
   border: solid 1px var(--color1);
-  /* transition: ease-in 0.2s; */
+
   padding: 8px 10px 10px 10px;
   line-height: 1;
   font-weight: 500;

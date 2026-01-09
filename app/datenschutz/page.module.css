@@ -16,11 +16,6 @@
   max-width: 50rem;
 }
 
-.lead {
-  max-width: 65ch;
-  color: var(--color3);
-}
-
 .heading {
   font-size: clamp(2rem, 1.4rem + 2vw, 2.2rem);
   color: var(--color1);
@@ -50,19 +45,4 @@
 
 .sections p + p {
   margin-top: 1rem;
-}
-
-.sections ul {
-  list-style: disc;
-  padding-left: 1.25rem;
-  color: var(--color3);
-}
-
-.sections li {
-  font-weight: 300;
-  line-height: 1.65;
-}
-
-.sections li + li {
-  margin-top: 0.5rem;
 }

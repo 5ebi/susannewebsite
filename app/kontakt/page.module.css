@@ -35,11 +35,6 @@
   max-width: 36rem;
 }
 
-.address {
-  font-size: 2rem;
-  margin-top: 0.75rem;
-}
-
 .contactDetails {
   display: flex;
   flex-direction: column;
@@ -58,14 +53,6 @@
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
-}
-
-.contactDetails span {
-  font-size: 1.2rem;
-  font-weight: 400;
-  /* text-transform: uppercase; */
-  letter-spacing: 0.08em;
-  color: var(--color3);
 }
 
 .contactDetails a {
@@ -141,47 +128,6 @@
   text-align: center;
 }
 
-.mapOverlayContent {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.75rem;
-  background: color-mix(in srgb, var(--color2) 88%, transparent);
-  border: 1px solid var(--color1_4);
-  border-radius: 14px;
-  padding: 1rem 1.25rem;
-  max-width: 22rem;
-  box-shadow: 0 16px 38px -28px var(--color3);
-}
-
-.mapLoading {
-  font-size: 0.95rem;
-  font-weight: 400;
-  color: var(--color3);
-}
-
-.mapLinkFloating {
-  position: absolute;
-  right: 0.75rem;
-  bottom: 0.75rem;
-  z-index: 4;
-  border-radius: 999px;
-  padding: 0.45rem 0.75rem;
-  border: 1px solid var(--color1_4);
-  background: color-mix(in srgb, var(--color2) 85%, transparent);
-  color: var(--color3);
-  font-size: 0.9rem;
-  text-decoration: none;
-  transition: background-color 0.15s ease, border-color 0.15s ease,
-    color 0.15s ease;
-}
-
-.mapLinkFloating:hover {
-  background: color-mix(in srgb, var(--color1_5) 100%, transparent);
-  border-color: var(--color1_2);
-  color: var(--color1);
-}
-
 .mapIframe {
   width: 100%;
   height: 100%;
@@ -250,31 +196,6 @@
   color: var(--color3_1);
 }
 
-.directions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-}
-
-.directionsLink {
-  display: inline-flex;
-  align-items: center;
-  border-radius: 999px;
-  padding: 0.6rem 0.9rem;
-  border: 1px solid var(--color1_3);
-  background: var(--color2);
-  color: var(--color3);
-  font-weight: 400;
-  transition: background-color 0.15s ease, border-color 0.15s ease,
-    color 0.15s ease;
-}
-
-.directionsLink:hover {
-  background: var(--color1_5);
-  border-color: var(--color1_2);
-  color: var(--color1);
-}
-
 @media (max-width: 900px) {
   .wrapper {
     gap: 2.5rem;
@@ -289,8 +210,4 @@
     justify-self: start;
     max-width: none;
   }
-
-  /* .formRow {
-    grid-template-columns: 1fr;
-  } */
 }

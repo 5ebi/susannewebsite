@@ -47,12 +47,13 @@ export default function Psychotherapie() {
           <Image
             src={Sitzgruppe1c}
             priority
-            sizes="(max-width: 1023px) 100vw, 45vw"
+            sizes="(max-width: 560px) 100vw, (max-width: 1023px) 35rem, 34rem"
             alt="Praxis von Magistra Susanne Rusch in 1200 Wien"
             className={styles.image}
           />
         </figure>
       </section>
+
     </main>
   );
 }

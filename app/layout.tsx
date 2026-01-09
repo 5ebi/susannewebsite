@@ -6,18 +6,53 @@ import Navbar from './components/navbar/Navbar';
 import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { ReactNode } from 'react';
+import { getSiteUrl } from './lib/site-url';
 
-const normalizeSiteUrl = (value: string) => {
-  const trimmed = value.trim().replace(/\/$/, '');
-  if (/^https?:\/\//i.test(trimmed)) return trimmed;
-  return `https://${trimmed}`;
+const siteUrl = getSiteUrl();
+
+const sameAs = [
+  'https://www.psyonline.at/psychotherapeutin/159786',
+  'https://www.jugendberatung.at/psychotherapeutin/159786',
+  'https://www.musiktherapie.at/musiktherapeutin/159786',
+];
+
+const businessAddress = {
+  '@type': 'PostalAddress',
+  streetAddress: 'Hannovergasse 16/3',
+  addressLocality: 'Wien',
+  postalCode: '1200',
+  addressCountry: 'AT',
 };
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL
-  ? normalizeSiteUrl(process.env.NEXT_PUBLIC_SITE_URL)
-  : process.env.VERCEL_URL
-  ? `https://${process.env.VERCEL_URL}`
-  : 'https://psychotherapie-rusch.at';
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'MedicalBusiness',
+      '@id': `${siteUrl}/#business`,
+      name: 'Praxis für Psychotherapie und Musiktherapie – Susanne Rusch',
+      url: siteUrl,
+      image: `${siteUrl}/images/susanne-rusch-psychotherapie.webp`,
+      telephone: '+43 680 1528926',
+      email: 'info@psychotherapie-rusch.at',
+      address: businessAddress,
+      sameAs,
+      founder: { '@id': `${siteUrl}/#person` },
+    },
+    {
+      '@type': 'Person',
+      '@id': `${siteUrl}/#person`,
+      name: 'Susanne Rusch',
+      honorificPrefix: 'Mag.a',
+      jobTitle: 'Psychotherapeutin und Musiktherapeutin',
+      telephone: '+43 680 1528926',
+      email: 'info@psychotherapie-rusch.at',
+      address: businessAddress,
+      worksFor: { '@id': `${siteUrl}/#business` },
+      sameAs,
+    },
+  ],
+};
 
 const notoSansJP = Noto_Sans_JP({
   variable: '--font-noto-sans-jp',
@@ -80,6 +115,10 @@ export default function RootLayout({
           <Analytics />
           <SpeedInsights />
         </div>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
         <Footer />
       </body>
     </html>

@@ -30,15 +30,6 @@ export default function Rahmenbedingungen() {
             einer regulären Therapieeinheit.
           </p>
         </section>
-        {/* <section>
-          <h2>Frequenz</h2>
-          <p>
-            Die Therapieeinheiten finden normalerweise wöchentlich statt. Vor
-            allem zu Beginn einer Therapie ist dies für den Aufbau einer
-            vertrauensvollen therapeutischen Beziehung sehr sinnvoll. Ein
-            Anpassen ist im Laufe des Prozesses möglich.
-          </p>
-        </section> */}
         <section>
           <h2>Kosten</h2>
           <p>Eine Therapieeinheit dauert 50 Minuten.</p>
