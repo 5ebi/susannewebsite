@@ -6,8 +6,8 @@ import Navbar from './components/navbar/Navbar';
 import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { ReactNode } from 'react';
+import { SITE_URL } from './lib/site';
 
-const siteUrl = 'https://psychotherapie-rusch.at';
 const isProd = process.env.VERCEL_ENV === 'production';
 
 const sameAs = [
@@ -29,26 +29,26 @@ const structuredData = {
   '@graph': [
     {
       '@type': 'MedicalBusiness',
-      '@id': `${siteUrl}/#business`,
+      '@id': `${SITE_URL}/#business`,
       name: 'Praxis für Psychotherapie und Musiktherapie – Susanne Rusch',
-      url: siteUrl,
-      image: `${siteUrl}/images/susanne-rusch-psychotherapie.webp`,
+      url: SITE_URL,
+      image: `${SITE_URL}/images/susanne-rusch-psychotherapie.webp`,
       telephone: '+43 680 1528926',
       email: 'info@psychotherapie-rusch.at',
       address: businessAddress,
       sameAs,
-      founder: { '@id': `${siteUrl}/#person` },
+      founder: { '@id': `${SITE_URL}/#person` },
     },
     {
       '@type': 'Person',
-      '@id': `${siteUrl}/#person`,
+      '@id': `${SITE_URL}/#person`,
       name: 'Susanne Rusch',
       honorificPrefix: 'Mag.ᵃ',
       jobTitle: 'Psychotherapeutin und Musiktherapeutin',
       telephone: '+43 680 1528926',
       email: 'info@psychotherapie-rusch.at',
       address: businessAddress,
-      worksFor: { '@id': `${siteUrl}/#business` },
+      worksFor: { '@id': `${SITE_URL}/#business` },
       sameAs,
     },
   ],
@@ -65,24 +65,22 @@ const lora = Lora({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  metadataBase: new URL(SITE_URL),
   title: {
-    default:
-      'Praxis für Psychotherapie und Musiktherapie in Wien | Susanne Rusch',
-    template: '%s | Susanne Rusch',
+    default: 'Susanne Rusch',
+    template: 'Susanne Rusch – %s',
   },
   description:
-    'Psychotherapie (Integrative Gestalttherapie) und Musiktherapie in Wien-Brigittenau (1200) – Mag.ᵃ Susanne Rusch. Termine nach Vereinbarung.',
+    'Praxis für Psychotherapie (Integrative Gestalttherapie) und Musiktherapie in Wien-Brigittenau (1200) – Mag.ᵃ Susanne Rusch. Termine nach Vereinbarung.',
   icons: {
     icon: [{ url: '/icon.png' }],
     apple: [{ url: '/apple-icon.png' }],
   },
   openGraph: {
-    title:
-      'Praxis für Psychotherapie und Musiktherapie in Wien | Susanne Rusch',
+    title: 'Susanne Rusch',
     description:
       'Psychotherapie (Integrative Gestalttherapie) und Musiktherapie in Wien-Brigittenau (1200) – Mag.ᵃ Susanne Rusch. Termine nach Vereinbarung.',
-    url: siteUrl,
+    url: SITE_URL,
     siteName: 'Susanne Rusch',
     locale: 'de_AT',
     type: 'website',

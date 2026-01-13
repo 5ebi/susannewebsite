@@ -1,15 +1,16 @@
 import type { MetadataRoute } from 'next';
-
-const siteUrl = 'https://psychotherapie-rusch.at';
+import { SITE_URL } from './lib/site';
 
 export default function robots(): MetadataRoute.Robots {
+  const isProd = process.env.VERCEL_ENV === 'production';
+
   return {
     rules: [
       {
         userAgent: '*',
-        allow: '/',
+        ...(isProd ? { allow: '/' } : { disallow: '/' }),
       },
     ],
-    sitemap: `${siteUrl}/sitemap.xml`,
+    sitemap: `${SITE_URL}/sitemap.xml`,
   };
 }

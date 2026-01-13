@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { SITE_URL } from './site';
 
 type PageMetadataInput = {
   title: string;
@@ -8,7 +9,6 @@ type PageMetadataInput = {
   ogImageAlt?: string;
 };
 
-const SITE_URL = 'https://psychotherapie-rusch.at';
 const SITE_NAME = 'Susanne Rusch';
 const LOCALE = 'de_AT';
 const DEFAULT_OG_IMAGE = '/images/susanne-rusch-psychotherapie.webp';

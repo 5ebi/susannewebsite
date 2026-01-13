@@ -1,6 +1,5 @@
 import type { MetadataRoute } from 'next';
-
-const baseUrl = 'https://psychotherapie-rusch.at';
+import { SITE_URL } from './lib/site';
 const staticRoutes = [
   '/',
   '/psychotherapie',
@@ -16,7 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
 
   return staticRoutes.map((path) => ({
-    url: new URL(path, baseUrl).toString(),
+    url: new URL(path, SITE_URL).toString(),
     lastModified,
   }));
 }
