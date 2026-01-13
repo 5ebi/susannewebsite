@@ -6,12 +6,9 @@ import Navbar from './components/navbar/Navbar';
 import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { ReactNode } from 'react';
-import { getSiteUrl } from './lib/site-url';
 
-const siteUrl = getSiteUrl();
-const isProduction = process.env.VERCEL_ENV
-  ? process.env.VERCEL_ENV === 'production'
-  : process.env.NODE_ENV === 'production';
+const siteUrl = 'https://psychotherapie-rusch.at';
+const isProd = process.env.VERCEL_ENV === 'production';
 
 const sameAs = [
   'https://www.psyonline.at/psychotherapeutin/159786',
@@ -85,17 +82,17 @@ export const metadata: Metadata = {
       'Praxis für Psychotherapie und Musiktherapie in Wien | Susanne Rusch',
     description:
       'Psychotherapie (Integrative Gestalttherapie) und Musiktherapie in Wien-Brigittenau (1200) – Mag.ᵃ Susanne Rusch. Termine nach Vereinbarung.',
-    url: '/',
+    url: siteUrl,
     siteName: 'Susanne Rusch',
     locale: 'de_AT',
     type: 'website',
   },
   robots: {
-    index: isProduction,
-    follow: isProduction,
+    index: isProd,
+    follow: isProd,
     googleBot: {
-      index: isProduction,
-      follow: isProduction,
+      index: isProd,
+      follow: isProd,
       'max-image-preview': 'large',
       'max-snippet': -1,
       'max-video-preview': -1,

@@ -1,5 +1,13 @@
 {
   "env": {
     "NEXT_PUBLIC_SITE_URL": "https://psychotherapie-rusch.at"
-  }
+  },
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.psychotherapie-rusch.at" }],
+      "destination": "https://psychotherapie-rusch.at/:path*",
+      "permanent": true
+    }
+  ]
 }

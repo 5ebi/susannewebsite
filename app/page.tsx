@@ -5,7 +5,7 @@ import KontaktButton from './components/KontaktButton';
 import { createPageMetadata } from './lib/seo';
 
 export const metadata = createPageMetadata({
-  title: 'Psychotherapie & Musiktherapie in Wien (1200)',
+  title: 'Psychotherapie & Musiktherapie in Wien (1200) | Susanne Rusch',
   description:
     'Praxis für Psychotherapie (Integrative Gestalttherapie) und Musiktherapie in Wien-Brigittenau (1200). Termine nach Vereinbarung – Kontakt online oder telefonisch.',
   canonical: '/',
