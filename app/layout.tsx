@@ -67,8 +67,8 @@ const lora = Lora({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'Susanne Rusch',
-    template: 'Susanne Rusch – %s',
+    default: 'Psychotherapie Wien 1200 | Susanne Rusch',
+    template: '%s | Susanne Rusch',
   },
   description:
     'Praxis für Psychotherapie (Integrative Gestalttherapie) und Musiktherapie in Wien-Brigittenau (1200) – Mag.ᵃ Susanne Rusch. Termine nach Vereinbarung.',
@@ -77,7 +77,6 @@ export const metadata: Metadata = {
     apple: [{ url: '/apple-icon.png' }],
   },
   openGraph: {
-    title: 'Susanne Rusch',
     description:
       'Psychotherapie (Integrative Gestalttherapie) und Musiktherapie in Wien-Brigittenau (1200) – Mag.ᵃ Susanne Rusch. Termine nach Vereinbarung.',
     url: SITE_URL,
