@@ -86,7 +86,6 @@ export default function KontaktClient() {
             </ul>
           </section>
         </div>
-
         <div className={styles.mapWrapper}>
           {!mapLoaded ? (
             <div className={styles.mapOverlay} aria-hidden="true"></div>

@@ -4,7 +4,7 @@ import { createPageMetadata } from '../lib/seo';
 export const metadata = createPageMetadata({
   title: 'Rahmenbedingungen, Kosten & Erstgespräch',
   description:
-    'Informationen zu Erstgespräch, Dauer, Kosten, möglichem Kostenzuschuss, Absageregelung und Verschwiegenheit. Praxis in Wien (1200).',
+    'Informationen zu Erstgespräch, Dauer, Kosten, möglichem Kostenzuschuss, Absageregelung und Verschwiegenheit. Praxis in Wien Brigittenau (1200).',
   canonical: '/rahmenbedingungen',
 });
 
@@ -38,7 +38,7 @@ export default function Rahmenbedingungen() {
             Leidenszustands oder einer krankheitswertigen Störung besteht die
             Möglichkeit, einen Kostenzuschuss bei der Krankenkasse zu
             beantragen. Je nach Krankenkasse werden zwischen 33,70 Euro und
-            48,80 Euro pro Einheit rückerstattet.
+            50,20 Euro pro Einheit rückerstattet.
           </p>
           <p>
             Eine Musiktherapie-Einheit kostet 90 Euro. Leider ist es derzeit
