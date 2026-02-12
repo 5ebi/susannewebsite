@@ -12,10 +12,7 @@ const staticRoutes = [
 ] as const;
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date();
-
   return staticRoutes.map((path) => ({
     url: new URL(path, SITE_URL).toString(),
-    lastModified,
   }));
 }

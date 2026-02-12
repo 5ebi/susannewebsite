@@ -1,10 +1,11 @@
-export default function Head() {
+import { ReactNode } from 'react';
+
+export default function KontaktLayout({ children }: { children: ReactNode }) {
   return (
     <>
-      <link rel="dns-prefetch" href="https://www.google.com" />
-      <link rel="dns-prefetch" href="https://www.gstatic.com" />
       <link rel="preconnect" href="https://www.google.com" />
       <link rel="preconnect" href="https://www.gstatic.com" crossOrigin="" />
+      {children}
     </>
   );
 }

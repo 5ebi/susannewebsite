@@ -3,7 +3,7 @@ import styles from './footer.module.css';
 
 export default function Footer() {
   return (
-    <div className={styles.footer}>
+    <footer className={styles.footer}>
       <ul className={styles.footerItems}>
         <li>
           <Link className={styles.link} href={'/impressum'}>
@@ -17,6 +17,6 @@ export default function Footer() {
           </Link>
         </li>
       </ul>
-    </div>
+    </footer>
   );
 }

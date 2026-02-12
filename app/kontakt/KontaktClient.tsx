@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import styles from './page.module.css';
 
 const MAP_SRC =
@@ -8,22 +8,6 @@ const MAP_SRC =
 
 export default function KontaktClient() {
   const [mapLoaded, setMapLoaded] = useState(false);
-  const [isResizing, setIsResizing] = useState(false);
-
-  useEffect(() => {
-    let timeoutId: number | undefined;
-    const onResize = () => {
-      setIsResizing(true);
-      if (timeoutId) window.clearTimeout(timeoutId);
-      timeoutId = window.setTimeout(() => setIsResizing(false), 150);
-    };
-
-    window.addEventListener('resize', onResize);
-    return () => {
-      window.removeEventListener('resize', onResize);
-      if (timeoutId) window.clearTimeout(timeoutId);
-    };
-  }, []);
 
   return (
     <main className={styles.kontaktPage}>
@@ -87,18 +71,17 @@ export default function KontaktClient() {
           </section>
         </div>
         <div className={styles.mapWrapper}>
-          {!mapLoaded ? (
+          {!mapLoaded && (
             <div className={styles.mapOverlay} aria-hidden="true"></div>
-          ) : null}
+          )}
 
           <iframe
             className={`${styles.mapIframe} ${
               mapLoaded ? styles.mapIframeVisible : ''
-            } ${isResizing ? styles.mapIframeHidden : ''}`}
+            }`}
             title="Praxisstandort Hannovergasse"
             src={MAP_SRC}
             allowFullScreen
-            loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
             onLoad={() => setMapLoaded(true)}
           />

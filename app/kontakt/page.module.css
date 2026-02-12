@@ -151,15 +151,10 @@
   transition: opacity 250ms ease;
   position: relative;
   z-index: 2;
-  will-change: opacity;
 }
 
 .mapIframeVisible {
   opacity: 1;
-}
-
-.mapIframeHidden {
-  display: none;
 }
 
 .arrival {

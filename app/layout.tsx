@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Noto_Sans_JP, Lora } from 'next/font/google';
+import { Noto_Sans_JP } from 'next/font/google';
 import './globals.css';
 import Footer from './components/footer/Footer';
 import Navbar from './components/navbar/Navbar';
@@ -59,11 +59,6 @@ const notoSansJP = Noto_Sans_JP({
   subsets: ['latin'],
 });
 
-const lora = Lora({
-  variable: '--font-lora',
-  subsets: ['latin'],
-});
-
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
@@ -105,7 +100,7 @@ export default function RootLayout({
   return (
     <html lang="de">
       <body
-        className={`${notoSansJP.variable} ${lora.variable}`}
+        className={notoSansJP.variable}
         style={{
           display: 'flex',
           flexDirection: 'column',

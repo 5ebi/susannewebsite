@@ -5,15 +5,11 @@
   width: var(--page-inline-width);
   margin-inline: auto;
   margin-top: 6rem;
-
-
 }
 .containerMain2 {
   width: var(--page-inline-width);
 
   border-radius: 1rem;
-
-
 }
 .containerMain3 {
   display: grid;
@@ -46,7 +42,6 @@
 }
 
 .heading {
-
   font-size: 2.2rem;
   text-align: left;
   font-weight: 300;
@@ -65,7 +60,6 @@
   grid-row: 1;
   width: 100%;
   max-width: var(--hero-image-width);
-
 
   height: var(--hero-image-height);
   object-fit: cover;
@@ -97,10 +91,6 @@
 
   align-self: stretch;
   align-content: center;
-
-
-
-
 }
 
 .spruchContainer2 {
@@ -113,13 +103,8 @@
   padding: 3.5rem 3rem;
   min-height: 6.5rem;
 
-
-
-
   overflow: hidden;
   align-self: center;
-
-
 }
 
 .spruchContainer3 {
@@ -141,19 +126,16 @@
 
   opacity: 1;
 
-
   text-align: left;
   padding-bottom: 0.7rem;
   max-width: 85%;
   margin: 0;
-
 }
 
 .spruch2 {
   position: relative;
   z-index: 1;
   font-size: 1rem;
-
 
   font-weight: 300;
   font-style: italic;
@@ -176,8 +158,6 @@
   text-align: right;
   padding-top: 0.5rem;
   padding-right: 1.4rem;
-
-
 }
 
 .ctaButton {
@@ -224,8 +204,6 @@
     text-align: left;
   }
 
-
-
   .image {
     width: 100%;
     max-width: 100%;
@@ -246,8 +224,6 @@
     text-align: left;
     padding: 3rem 0rem;
   }
-
-
 
   .spruch,
   .spruch2 {
@@ -274,8 +250,6 @@
     min-width: 0;
   }
 
-
-
   .heading {
     font-weight: 300;
     font-size: clamp(1.6rem, 8vw, 2.2rem);
@@ -287,16 +261,10 @@
   }
   .spruch2 {
     font-size: 1rem;
-
-    font-family: var(--font-lora), serif;
-    font-weight: 400;
   }
 
   .spruch2_1 {
     font-size: 0.9rem;
-
-    font-family: var(--font-lora), serif;
-    font-weight: 400;
   }
   .spruchContainer {
     width: 85vw;
@@ -316,17 +284,14 @@
 
   .spruchContainer3 {
     display: flex;
-    box-shadow: none;
-    font-size: 1rem;
-    margin-top: 0;
+    padding: 0;
+    margin: 0;
   }
 
-  .spruchContainer3 p {
-    font-size: 0.9rem;
-    width: 80vw;
-    text-align: left;
-  }
   .ctaButton {
     display: flex;
+    margin: 0;
+    margin-bottom: 3rem;
+    padding: 0;
   }
 }

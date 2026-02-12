@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import styles from './page.module.css';
-import portraitImage from '@/public/images/susanne-rusch-face.jpg';
+import portraitImage from '@/public/images/susanne-rusch-face.webp';
 import { createPageMetadata } from '../lib/seo';
 
 export const metadata = createPageMetadata({
